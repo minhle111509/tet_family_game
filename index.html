@@ -4,12 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#b3121b">
-<meta name="description" content="12 trò chơi Tết gia đình — Xuân Đinh Mùi 2027">
+<meta name="description" content="14 trò chơi Tết gia đình — Xuân Đinh Mùi 2027">
 <title>Trò Chơi Tết 2027</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/splash-400-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* Self-hosted fonts (latin, latin-ext, vietnamese subsets) */
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/bevietnampro-400-vietnamese.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/bevietnampro-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/bevietnampro-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/bevietnampro-600-vietnamese.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/bevietnampro-600-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 600; font-display: swap; src: url(fonts/bevietnampro-600-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/bevietnampro-700-vietnamese.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/bevietnampro-700-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/bevietnampro-700-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 800; font-display: swap; src: url(fonts/bevietnampro-800-vietnamese.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 800; font-display: swap; src: url(fonts/bevietnampro-800-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 800; font-display: swap; src: url(fonts/bevietnampro-800-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/dancingscript-700-vietnamese.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/dancingscript-700-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Dancing Script'; font-style: normal; font-weight: 700; font-display: swap; src: url(fonts/dancingscript-700-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Splash'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/splash-400-vietnamese.woff2) format('woff2'); unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB; }
+@font-face { font-family: 'Splash'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/splash-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Splash'; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/splash-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 :root{
   --red-950:#4a0306; --red-900:#6d070b; --red-800:#8e0b10; --red-700:#b3121b; --red-600:#d81e25; --red-500:#ec3b3b;
   --gold-100:#fff5d6; --gold-200:#ffe7a3; --gold-300:#ffd66b; --gold-400:#f5b93a; --gold-500:#d99a1e; --gold-700:#9c6510;
@@ -277,6 +294,104 @@ footer b{font-family:var(--font-script);font-size:26px;color:var(--gold-200);fon
 .pull:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.4)}
 .pull:disabled{opacity:.45;cursor:not-allowed}
 
+/* 13. Xin chữ ông đồ */
+.ongdo-form{display:flex;flex-direction:column;align-items:center;gap:12px}
+.paper-pick{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.paper-pick button{font:inherit;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;cursor:pointer;border:1px solid var(--line);background:rgba(255,214,107,.1);color:var(--gold-200);display:inline-flex;align-items:center;gap:8px}
+.paper-pick button i{width:16px;height:16px;border-radius:4px;border:1px solid rgba(255,255,255,.6)}
+.paper-pick button[aria-pressed="true"]{background:var(--gold-grad);color:var(--ink);border-color:#fff}
+.scroll{position:relative;width:min(380px,100%);margin:22px auto 0;animation:cardIn .5s backwards}
+.rod{position:relative;height:16px;margin:0 -14px;border-radius:8px;background:linear-gradient(180deg,#a8662a,#5b2a0c 60%,#3b1806);box-shadow:0 6px 12px rgba(0,0,0,.4);z-index:2}
+.rod::before,.rod::after{content:'';position:absolute;top:-3px;width:16px;height:22px;border-radius:5px;background:var(--gold-grad);box-shadow:0 2px 4px rgba(0,0,0,.4)}
+.rod::before{left:-6px}.rod::after{right:-6px}
+.paper{--inkc:#170404;position:relative;padding:26px 22px 22px;min-height:440px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;overflow:hidden;
+  box-shadow:inset 0 0 0 7px transparent,inset 0 0 0 8px rgba(255,214,107,.55),inset 0 0 40px rgba(0,0,0,.22),0 18px 36px rgba(0,0,0,.4)}
+.paper.red{color:var(--inkc);background:
+  radial-gradient(circle at 18% 22%,rgba(255,214,107,.55) 0 1.4px,transparent 2px) 0 0/37px 41px,
+  radial-gradient(circle at 70% 60%,rgba(255,226,150,.45) 0 1px,transparent 1.6px) 0 0/23px 29px,
+  radial-gradient(circle at 40% 80%,rgba(255,200,90,.35) 0 2px,transparent 2.6px) 0 0/61px 53px,
+  linear-gradient(170deg,#d8222a,#b3121b 55%,#97090f)}
+.paper.do{--inkc:#1d1309;color:var(--inkc);box-shadow:inset 0 0 0 7px transparent,inset 0 0 0 8px rgba(156,101,16,.45),inset 0 0 50px rgba(120,80,20,.25),0 18px 36px rgba(0,0,0,.4);
+  background:repeating-linear-gradient(83deg,rgba(150,110,50,.06) 0 1px,transparent 1px 7px),repeating-linear-gradient(-12deg,rgba(150,110,50,.05) 0 1px,transparent 1px 11px),linear-gradient(175deg,#f7ecd2,#efdcb4)}
+.paper .p-top{font-size:12px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;opacity:.75}
+.chu-wrap{position:relative;flex:1;display:grid;place-items:center;width:100%;min-height:220px}
+.chu{font-family:'Splash','Brush Script MT',cursive;font-weight:400;line-height:1;font-size:var(--fs,150px);color:var(--inkc);white-space:nowrap;
+  text-shadow:0 0 1px rgba(0,0,0,.35);-webkit-mask-image:linear-gradient(100deg,#000 45%,transparent 55%);mask-image:linear-gradient(100deg,#000 45%,transparent 55%);
+  -webkit-mask-size:320% 100%;mask-size:320% 100%;-webkit-mask-position:100% 0;mask-position:100% 0}
+.chu.write{animation:inkWrite 1.9s cubic-bezier(.45,.1,.4,1) forwards}
+.chu.done{-webkit-mask-image:none;mask-image:none}
+@keyframes inkWrite{to{-webkit-mask-position:0 0;mask-position:0 0}}
+.brush{position:absolute;top:50%;left:6%;font-size:46px;pointer-events:none;opacity:0;filter:drop-shadow(0 4px 4px rgba(0,0,0,.35))}
+.brush.go{animation:brushMove 1.9s cubic-bezier(.45,.1,.4,1) forwards}
+@keyframes brushMove{0%{opacity:1;transform:translate(0,-80%) rotate(-10deg)}25%{transform:translate(18vw,-20%) rotate(8deg)}50%{transform:translate(8vw,-90%) rotate(-6deg)}80%{opacity:1;transform:translate(min(56vw,230px),-30%) rotate(10deg)}100%{opacity:0;transform:translate(min(60vw,250px),-60%)}}
+.p-wish{margin:6px 0 10px;font-family:var(--font-script);font-weight:700;font-size:25px;line-height:1.25;opacity:0;transition:opacity .8s .2s}
+.p-foot{display:flex;align-items:flex-end;justify-content:center;gap:12px;opacity:0;transition:opacity .8s .5s}
+.paper.shown .p-wish,.paper.shown .p-foot{opacity:1}
+.p-lk{font-size:13px;line-height:1.45;text-align:right}
+.p-lk b{font-size:15px}
+.seal{width:44px;height:44px;flex:none;display:grid;place-items:center;border-radius:6px;font-weight:800;font-size:19px;transform:rotate(-4deg);
+  background:var(--gold-grad);color:#7a090d;box-shadow:inset 0 0 0 2px #7a090d,inset 0 0 0 4px rgba(255,240,200,.7)}
+.paper.do .seal{background:#c0161c;color:#fff2d8;box-shadow:inset 0 0 0 2px #fff2d8,inset 0 0 0 4px #c0161c}
+.chu-why{max-width:520px;margin:18px auto 0;padding:16px 18px;border-radius:16px;text-align:left;background:rgba(0,0,0,.24);border:1px solid var(--line);font-size:15px;opacity:0;transition:opacity .6s .6s}
+.chu-why.shown{opacity:1}
+.chu-why h4{margin:0 0 6px;color:var(--gold-200);font-size:16px}
+.chu-why p{margin:0 0 6px}.chu-why p:last-child{margin:0}
+@media (prefers-reduced-motion:reduce){.chu.write,.brush.go{animation-duration:.01s}}
+
+/* 14. Xăm Đức Thánh Trần */
+.altar{max-width:560px;margin:0 auto 16px;padding:14px 14px 18px;border-radius:20px;border:1px solid var(--line);
+  background:radial-gradient(120% 90% at 50% 0%,rgba(255,200,90,.22),transparent 60%),linear-gradient(180deg,#5a0508,#3a0204);box-shadow:inset 0 0 0 4px rgba(255,214,107,.12),0 14px 30px rgba(0,0,0,.35)}
+.altar-hd{display:inline-flex;flex-direction:column;align-items:center;padding:8px 22px;border-radius:10px;border:2px solid var(--gold-400);background:linear-gradient(180deg,#b3121b,#7d0a0e);box-shadow:0 4px 10px rgba(0,0,0,.35)}
+.altar-hd span{font-weight:800;font-size:clamp(18px,4.4vw,24px);letter-spacing:.06em;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.altar-hd small{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-200)}
+.altar-row{display:flex;align-items:flex-end;justify-content:space-around;gap:8px;margin-top:10px;min-height:240px}
+.incense{position:relative;width:84px;height:170px}
+.tt-bowl{position:absolute;bottom:0;left:4px;right:4px;height:46px;border-radius:8px 8px 26px 26px;background:linear-gradient(90deg,#8a5a12,#f5c35a 45%,#b37a1d);box-shadow:0 6px 12px rgba(0,0,0,.4)}
+.tt-sticks{position:absolute;bottom:40px;left:0;right:0;display:flex;justify-content:center;gap:12px}
+.tt-sticks b{position:relative;flex:none;display:block;width:4px;height:104px;border-radius:2px;background:linear-gradient(#5b2a0c 0 70%,#c0161c 70%)}
+.tt-sticks b:nth-child(1){transform:rotate(-8deg);transform-origin:bottom}.tt-sticks b:nth-child(3){transform:rotate(8deg);transform-origin:bottom}
+.tt-sticks b::before{content:'';position:absolute;top:-3px;left:-1px;width:6px;height:6px;border-radius:50%;background:#ff7a2e;box-shadow:0 0 8px 3px rgba(255,120,40,.8);opacity:0;transition:opacity .6s}
+.incense.lit .tt-sticks b::before{opacity:1;animation:ember 1.4s ease-in-out infinite alternate}
+@keyframes ember{to{box-shadow:0 0 12px 5px rgba(255,160,60,.9)}}
+.smoke{position:absolute;bottom:140px;left:0;right:0;height:90px;pointer-events:none;opacity:0;transition:opacity 1.2s}
+.incense.lit .smoke{opacity:1}
+.smoke i{position:absolute;bottom:0;left:50%;width:14px;height:40px;border-radius:50%;background:rgba(255,245,230,.35);filter:blur(5px);animation:smoke 3.2s linear infinite}
+.smoke i:nth-child(2){animation-delay:-1.1s;margin-left:-14px}.smoke i:nth-child(3){animation-delay:-2.2s;margin-left:10px}
+@keyframes smoke{0%{transform:translate(-50%,0) scale(.6);opacity:0}20%{opacity:.9}100%{transform:translate(-30%,-80px) scale(1.6) rotate(20deg);opacity:0}}
+.tube-wrap.xt{width:100px;height:210px;margin:0}
+.tube-wrap.xt .sticks{bottom:110px;left:12px;right:12px}
+.tube-wrap.xt .tube{height:130px}
+.stick-no{position:absolute;top:-6px;left:50%;transform:translateX(-50%);min-width:44px;padding:4px 8px;border-radius:8px;background:var(--cream);color:var(--red-800);font-weight:800;font-size:20px;border:2px solid var(--gold-400);box-shadow:0 6px 14px rgba(0,0,0,.4);animation:cardIn .4s backwards}
+.keo-pair{display:flex;gap:10px;padding-bottom:6px}
+.keo{display:block;width:44px;height:24px;border-radius:44px 44px 6px 6px;background:linear-gradient(180deg,#e8323a,#9e0d13);box-shadow:inset 0 -3px 0 rgba(0,0,0,.25),0 4px 6px rgba(0,0,0,.4)}
+.keo.up{border-radius:6px 6px 44px 44px;background:linear-gradient(180deg,#f3d9a4,#c99a52);box-shadow:inset 0 3px 0 rgba(255,255,255,.4),0 4px 6px rgba(0,0,0,.4)}
+.keo-pair.toss .keo{animation:keoToss 1.3s cubic-bezier(.3,.6,.4,1)}
+.keo-pair.toss .keo:nth-child(2){animation-delay:.08s}
+@keyframes keoToss{0%{transform:translateY(0) rotateX(0)}45%{transform:translateY(-130px) rotateX(900deg)}80%{transform:translateY(0) rotateX(1440deg)}90%{transform:translateY(-10px) rotateX(1440deg)}100%{transform:translateY(0) rotateX(1440deg)}}
+.topic-lb{margin:8px 0 6px;font-weight:600;font-size:14px;color:var(--gold-200)}
+.topics{max-width:520px;margin:0 auto 12px}
+.xam-msg{min-height:48px;margin:6px auto 12px;max-width:520px;font-size:15.5px;color:var(--cream)}
+.xam-card{max-width:560px;margin:22px auto 0;padding:22px 20px;border-radius:18px;text-align:left;background:linear-gradient(180deg,#fff8ea,#ffeec4);color:var(--ink);border:2px solid var(--gold-400);box-shadow:0 14px 30px rgba(0,0,0,.35);animation:cardIn .5s backwards}
+.xam-top{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-700)}
+.xam-top b{letter-spacing:.04em;font-size:15px;padding:4px 12px;border-radius:999px;color:#fff;background:var(--red-700)}
+.xam-card.tt .xam-top b{background:linear-gradient(90deg,#b3121b,#e0242b);box-shadow:0 0 0 2px var(--gold-400)}
+.xam-card.tb .xam-top b{background:#9c6510}
+.xam-card.hq .xam-top b{background:#5f5a55}
+.xam-card .f-for{margin:10px 0 0}
+.xam-poem{margin:14px 0;padding:14px 10px;border-radius:12px;background:rgba(179,18,27,.06);border-left:4px solid var(--red-700);text-align:center;font-family:var(--font-script);font-size:clamp(21px,4.6vw,25px);line-height:1.45;color:var(--red-800)}
+.xam-poem span{display:block}
+.xam-poem span:nth-child(odd){padding-right:1.2em}
+.xam-y{margin:0 0 10px;font-size:16px}
+.xam-main{margin:0 0 10px;padding:12px 14px;border-radius:12px;background:var(--gold-grad)}
+.xam-main p{margin:4px 0 0;font-weight:600;font-size:16px}
+.xam-more{margin:0 0 12px;font-size:15px}
+.xam-more summary{cursor:pointer;font-weight:700;color:var(--red-700)}
+.xam-more ul{margin:8px 0 0;padding-left:18px}.xam-more li{margin-bottom:4px}
+.xam-soft{margin:10px 0 0;font-size:13.5px;font-style:italic;color:#6b4b2a}
+.xam-note{max-width:520px;margin:18px auto 0;font-size:12.5px;color:rgba(255,240,220,.7)}
+.xam-top span,.xam-top b{white-space:nowrap}
+@media (max-width:480px){.xam-card{padding:18px 14px}.xam-top{letter-spacing:.06em}.xam-top b{font-size:13px;padding:4px 10px}.xam-poem{font-size:17px;padding:12px 4px;line-height:1.55}.xam-poem span:nth-child(odd){padding-right:0}.altar-row{min-height:210px}.incense{width:64px;transform:scale(.85);transform-origin:bottom}.keo{width:36px;height:20px}}
+
 /* ---------- Settings dialog ---------- */
 .dlg{border:1px solid var(--line);border-radius:22px;padding:0;width:calc(100% - 32px);max-width:580px;background:var(--red-950);color:var(--cream);box-shadow:0 30px 80px rgba(0,0,0,.6)}
 .dlg::backdrop{background:rgba(30,0,0,.6);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
@@ -374,7 +489,7 @@ footer{padding-bottom:84px}
   <div class="hero-inner">
     <p class="eyebrow">Xuân Đinh Mùi</p>
     <h1 class="title">Chúc Mừng Năm Mới<span class="year">2027</span></h1>
-    <p class="sub">12 trò chơi Tết cho cả nhà: lấy lộc, lấy may và lấy tiếng cười.</p>
+    <p class="sub">14 trò chơi Tết cho cả nhà: lấy lộc, lấy may và lấy tiếng cười.</p>
     <div class="hero-actions">
       <span class="pill" id="countdown">🌸 Xuân Đinh Mùi 2027</span>
       <button class="btn ghost small" id="openSettings" type="button">⚙️ Cài đặt phần thưởng</button>
@@ -384,7 +499,7 @@ footer{padding-bottom:84px}
 
 <main>
   <section id="hub" aria-labelledby="hubTitle">
-    <div class="hub-head"><h2 id="hubTitle">Chọn trò chơi</h2><span>12 trò · 6 trò mới</span></div>
+    <div class="hub-head"><h2 id="hubTitle">Chọn trò chơi</h2><span>14 trò · 8 trò mới</span></div>
     <div class="grid" id="grid"></div>
   </section>
   <section id="game" hidden>
@@ -1482,6 +1597,339 @@ game({ id: 'keoco', icon: '🪢', title: 'Kéo Co Đại Chiến', tag: '2 độ
     addEventListener('keydown', onKey);
     onCleanup(() => removeEventListener('keydown', onKey));
     $('#go', st).onclick = start;
+  }
+});
+
+/* ---------- 13. Xin chữ ông đồ ---------- */
+/* Each character: meaning (y), short couplet line for the scroll (c), personal wish ({n} = given name) */
+const CHU = {
+  'Phúc':  { y: 'điều may mắn, tốt lành đến với cả nhà', c: 'Phúc đầy nhà, lộc đầy sân', w: 'Chúc {n} năm mới gặp toàn chuyện lành, đi đâu cũng có quý nhân giúp đỡ.' },
+  'Lộc':   { y: 'của cải, tài lộc và những món quà bất ngờ', c: 'Xuân sang lộc biếc đầy cành', w: 'Chúc {n} năm mới tiền vào như nước, lì xì đầy túi.' },
+  'Thọ':   { y: 'sống lâu, mạnh khỏe, an hưởng tuổi già', c: 'Tuổi cao sức khỏe dồi dào', w: 'Chúc {n} sống vui, sống khỏe, sống lâu bên con cháu.' },
+  'An':    { y: 'bình yên, không lo âu, không sóng gió', c: 'Một năm bình an trọn vẹn', w: 'Chúc {n} năm mới thân an, tâm an, nhà cửa yên vui.' },
+  'Tâm':   { y: 'tấm lòng trong sáng, sống bằng sự chân thành', c: 'Lòng trong như nước mùa xuân', w: 'Chúc {n} luôn giữ trái tim ấm áp, thương người và được người thương.' },
+  'Nhẫn':  { y: 'kiên nhẫn, bình tĩnh trước mọi việc', c: 'Một điều nhịn, chín điều lành', w: 'Chúc {n} năm mới điềm tĩnh, việc khó mấy cũng từ từ mà xong.' },
+  'Đức':   { y: 'đạo đức tốt, sống tử tế được mọi người quý', c: 'Có đức mặc sức mà ăn', w: 'Chúc {n} năm mới sống tử tế, gieo điều lành, gặt quả ngọt.' },
+  'Trí':   { y: 'trí tuệ sáng suốt, học một biết mười', c: 'Đèn trí sáng soi đường xa', w: 'Chúc {n} năm mới đầu óc sáng suốt, học gì cũng nhanh.' },
+  'Tài':   { y: 'tài năng, giỏi giang, khéo tay hay làm', c: 'Tài cao chí lớn vươn xa', w: 'Chúc {n} năm mới tài năng tỏa sáng, làm gì cũng giỏi.' },
+  'Hiếu':  { y: 'lòng hiếu thảo với ông bà, cha mẹ', c: 'Công cha nghĩa mẹ khắc ghi', w: 'Chúc {n} năm mới ngoan hiền, hiếu thảo, cả nhà vui lòng.' },
+  'Nhân':  { y: 'lòng nhân ái, biết yêu thương mọi người', c: 'Thương người như thể thương thân', w: 'Chúc {n} năm mới cho đi thật nhiều và nhận lại còn nhiều hơn.' },
+  'Tín':   { y: 'chữ tín, nói là làm, được mọi người tin', c: 'Một lời nói, một gói vàng', w: 'Chúc {n} năm mới giữ chữ tín, ai cũng tin, việc gì cũng thành.' },
+  'Hòa':   { y: 'hòa thuận, êm ấm trong gia đình', c: 'Gia hòa vạn sự hưng', w: 'Chúc nhà {n} năm mới êm ấm, trên thuận dưới hòa.' },
+  'Thành': { y: 'thành công, việc gì làm cũng đến nơi đến chốn', c: 'Có chí thì nên', w: 'Chúc {n} năm mới cầu được ước thấy, dự định nào cũng thành.' },
+  'Đạt':   { y: 'đỗ đạt, đạt được mục tiêu mình mong muốn', c: 'Học hành tấn tới, đỗ đạt cao', w: 'Chúc {n} năm mới thi đâu đỗ đó, đặt mục tiêu nào cũng chạm tới.' },
+  'Minh':  { y: 'sáng suốt, minh mẫn, nhìn việc rõ ràng', c: 'Trăng xuân sáng tỏ muôn nơi', w: 'Chúc {n} năm mới tinh anh, sáng suốt, chọn đâu đúng đó.' },
+  'Hưng':  { y: 'hưng thịnh, làm ăn ngày một đi lên', c: 'Vạn sự hanh thông, thịnh vượng', w: 'Chúc {n} năm mới công việc thăng hoa, ngày càng phát đạt.' },
+  'Khang': { y: 'khỏe mạnh, an khang, ít ốm đau', c: 'An khang thịnh vượng', w: 'Chúc {n} năm mới khỏe re, ăn ngon ngủ kỹ, chẳng lo ốm đau.' },
+  'Hạnh':  { y: 'hạnh phúc, niềm vui giản dị mỗi ngày', c: 'Xuân về hạnh phúc ngập tràn', w: 'Chúc {n} năm mới ngày nào cũng có một chuyện vui để cười.' },
+  'Chí':   { y: 'ý chí bền bỉ, quyết tâm không bỏ cuộc', c: 'Chí lớn vượt núi băng sông', w: 'Chúc {n} năm mới vững chí, đã muốn là làm, đã làm là tới.' },
+  'Xuân':  { y: 'mùa xuân tươi trẻ, khởi đầu mới đầy sức sống', c: 'Xuân về muôn hoa đua nở', w: 'Chúc {n} năm mới luôn tươi trẻ, rạng rỡ như mùa xuân.' },
+  'Nghĩa': { y: 'tình nghĩa, sống trước sau như một', c: 'Trọng nghĩa khinh tài', w: 'Chúc {n} năm mới bạn bè thủy chung, tình thân bền chặt.' },
+  'Vinh':  { y: 'vinh hiển, được ghi nhận và khen ngợi', c: 'Vinh hoa phú quý', w: 'Chúc {n} năm mới được khen nhiều, thưởng lớn, tiếng thơm lan xa.' },
+  'Học':   { y: 'chăm học, ham hiểu biết', c: 'Học, học nữa, học mãi', w: 'Chúc {n} năm mới học giỏi, điểm mười nối đuôi nhau về nhà.' },
+  'Vui':   { y: 'niềm vui, tiếng cười rộn rã', c: 'Xuân vui rộn rã tiếng cười', w: 'Chúc {n} năm mới cười nhiều, buồn ít, đi đâu cũng mang niềm vui.' }
+};
+/* Given names grouped by meaning → the characters that suit them best */
+const NAME_GROUPS = [
+  { goi: 'ánh sáng và sự thông minh', chu: ['Trí', 'Minh', 'Đạt'], names: 'quang huy nhật tuệ tú khôi thông sáng ánh dương hiển tường triết khoa' },
+  { goi: 'những thứ quý giá như ngọc như vàng', chu: ['Phúc', 'Lộc', 'Vinh'], names: 'ngọc châu kim ngân bảo trân quý anh diệu bích thư' },
+  { goi: 'sông nước bao la', chu: ['An', 'Tâm', 'Chí'], names: 'hà giang hải thủy biển hồ khê băng tuyết sương vân mây' },
+  { goi: 'núi rừng vững chãi', chu: ['Chí', 'Nhẫn', 'Thọ'], names: 'sơn lâm phong nham tùng bách trúc mộc lĩnh' },
+  { goi: 'hoa thơm cỏ lạ, dịu dàng tươi tắn', chu: ['Hạnh', 'Xuân', 'Phúc'], names: 'hoa lan mai đào cúc hồng huệ liên hương vy vi my mỹ linh trang thảo nhi quỳnh trà hạ thu đông nguyệt trăng nga hằng uyên diễm kiều nhung' },
+  { goi: 'sức mạnh và lòng dũng cảm', chu: ['Chí', 'Hưng', 'Thành'], names: 'hùng dũng cường mạnh kiên cương quân tuấn long hổ hoàng vương lực uy bằng hiệp sĩ' },
+  { goi: 'sự hiền hậu và đức độ', chu: ['Đức', 'Nhân', 'Hiếu'], names: 'thiện hiền thục trung chính công lễ nhã từ ái thương lương' },
+  { goi: 'sự phát đạt, giàu sang', chu: ['Lộc', 'Hưng', 'Thành'], names: 'thắng lợi phát thịnh phú tiến vượng tấn toàn cát sang' },
+  { goi: 'sự yên ả, thanh bình', chu: ['An', 'Hòa', 'Khang'], names: 'yên thanh tĩnh thuận khánh ninh định nhiên hậu' },
+  { goi: 'niềm vui và may mắn', chu: ['Hạnh', 'Vui', 'Phúc'], names: 'hân lạc phương duyên tiên niềm mừng hỷ hy hoan vũ' },
+  { goi: 'một bạn nhỏ đáng yêu', chu: ['Học', 'Khang', 'Vui'], names: 'bi bin bo bống na su mít tôm cún bông gạo nấm ken bơ sóc xu mi bé út cò chíp kem' }
+];
+const viNorm = s => s.normalize('NFC').toLowerCase().trim()
+  .replace(/o([àáảãạ])(?=$|\s)/g, (m, v) => ({ 'à': 'òa', 'á': 'óa', 'ả': 'ỏa', 'ã': 'õa', 'ạ': 'ọa' }[v]))
+  .replace(/u([ỳýỷỹỵ])(?=$|\s)/g, (m, v) => ({ 'ỳ': 'ùy', 'ý': 'úy', 'ỷ': 'ủy', 'ỹ': 'ũy', 'ỵ': 'ụy' }[v]));
+const CHU_KEYS = Object.keys(CHU);
+const CHU_BY_NORM = Object.fromEntries(CHU_KEYS.map(k => [viNorm(k), k]));
+const NAME_TO_GROUP = {};
+NAME_GROUPS.forEach(g => g.names.split(' ').forEach(n => { if (!n.includes('-')) NAME_TO_GROUP[viNorm(n)] = g; }));
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+/* Pick characters that suit a name: own name if it is already a good character,
+   else by meaning group, else a stable choice derived from the name itself */
+function chuForName(full) {
+  const words = viNorm(full).split(/\s+/).filter(Boolean);
+  const given = words[words.length - 1];
+  const nice = cap(full.trim().split(/\s+/).pop());
+  if (CHU_BY_NORM[given]) {
+    const k = CHU_BY_NORM[given];
+    const grp = NAME_TO_GROUP[given];
+    return { list: [k, ...(grp ? grp.chu : []).filter(x => x !== k)], why: `Tên <b>${esc(nice)}</b> vốn đã là một chữ đẹp, nên ông đồ viết tặng đúng chữ trong tên của bạn.` };
+  }
+  if (NAME_TO_GROUP[given]) {
+    const g = NAME_TO_GROUP[given];
+    return { list: [...g.chu], why: `Tên <b>${esc(nice)}</b> gợi đến ${g.goi}, nên ông đồ chọn chữ hợp với ý nghĩa ấy.` };
+  }
+  for (const w of words) if (CHU_BY_NORM[w]) return { list: [CHU_BY_NORM[w]], why: `Trong tên <b>${esc(full.trim())}</b> có chữ <b>${CHU_BY_NORM[w]}</b>, ông đồ viết tặng chính chữ ấy.` };
+  let h = 0; for (const ch of given) h = (h * 31 + ch.codePointAt(0)) >>> 0;
+  const start = h % CHU_KEYS.length;
+  return { list: [0, 7, 13].map(o => CHU_KEYS[(start + o) % CHU_KEYS.length]), why: `Ông đồ ngắm tên <b>${esc(nice)}</b> hồi lâu, chấm mực rồi phóng bút một chữ hợp với người mang tên ấy.` };
+}
+const chuSize = w => w.length <= 2 ? 170 : w.length <= 4 ? 150 : 124;
+const slug = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').replace(/[^\w]+/g, '-').replace(/^-|-$/g, '').toLowerCase() || 'chu';
+
+/* Render the scroll to a PNG the family can keep or share */
+async function saveChu(d) {
+  try { await Promise.all([document.fonts.load(`200px Splash`, d.chu), document.fonts.load(`700 40px "Dancing Script"`, d.cau), document.fonts.load(`700 24px "Be Vietnam Pro"`, d.full)]); } catch (e) { /* use fallback fonts */ }
+  const W = 900, H = 1300, c = document.createElement('canvas'); c.width = W; c.height = H;
+  const x = c.getContext('2d'), red = d.paper === 'red', ink = red ? '#170404' : '#1d1309';
+  const g = x.createLinearGradient(0, 0, W * .3, H);
+  if (red) { g.addColorStop(0, '#d8222a'); g.addColorStop(.55, '#b3121b'); g.addColorStop(1, '#97090f'); }
+  else { g.addColorStop(0, '#f7ecd2'); g.addColorStop(1, '#efdcb4'); }
+  x.fillStyle = '#6d070b'; x.fillRect(0, 0, W, H);
+  x.fillStyle = g; x.fillRect(40, 40, W - 80, H - 80);
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  for (let i = 0; i < (red ? 900 : 500); i++) {
+    x.fillStyle = red ? `rgba(255,${200 + rnd() * 40 | 0},${90 + rnd() * 70 | 0},${.25 + rnd() * .45})` : `rgba(140,100,40,${.06 + rnd() * .12})`;
+    x.beginPath(); x.arc(50 + rnd() * (W - 100), 50 + rnd() * (H - 100), red ? .8 + rnd() * 2.2 : .6 + rnd() * 1.4, 0, 7); x.fill();
+  }
+  x.strokeStyle = red ? 'rgba(255,214,107,.6)' : 'rgba(156,101,16,.5)'; x.lineWidth = 3; x.strokeRect(68, 76, W - 136, H - 152);
+  const rod = y => { const rg = x.createLinearGradient(0, y, 0, y + 40); rg.addColorStop(0, '#a8662a'); rg.addColorStop(.6, '#5b2a0c'); rg.addColorStop(1, '#3b1806');
+    x.fillStyle = rg; x.beginPath(); x.roundRect(10, y, W - 20, 40, 20); x.fill(); x.fillStyle = '#f5b93a'; x.beginPath(); x.roundRect(0, y - 6, 40, 52, 10); x.roundRect(W - 40, y - 6, 40, 52, 10); x.fill(); };
+  rod(20); rod(H - 60);
+  x.textAlign = 'center'; x.fillStyle = ink;
+  x.globalAlpha = .75; x.font = '700 24px "Be Vietnam Pro", sans-serif'; x.fillText('X U Â N   Đ I N H   M Ù I', W / 2, 150); x.globalAlpha = 1;
+  // Draw the character on a scratch canvas and scan its pixels for the real ink box:
+  // brush swashes reach far past the glyph metrics, and measureText bounds differ between browsers.
+  const tc = document.createElement('canvas'); tc.width = 2400; tc.height = 1000;
+  const tx = tc.getContext('2d', { willReadFrequently: true });
+  tx.font = '400px Splash, cursive'; tx.textBaseline = 'middle'; tx.fillStyle = ink; tx.fillText(d.chu, 300, 500);
+  const px = tx.getImageData(0, 0, tc.width, tc.height).data;
+  let x0 = tc.width, y0 = tc.height, x1 = -1, y1 = -1;
+  for (let yy = 0; yy < tc.height; yy += 2) for (let xx = 0; xx < tc.width; xx += 2) {
+    if (px[(yy * tc.width + xx) * 4 + 3] > 24) { if (xx < x0) x0 = xx; if (xx > x1) x1 = xx; if (yy < y0) y0 = yy; if (yy > y1) y1 = yy; }
+  }
+  if (x1 > 0) {
+    const bw = x1 - x0 + 4, bh = y1 - y0 + 4, sc = Math.min((W - 220) / bw, 560 / bh, 1.15);
+    x.drawImage(tc, x0 - 2, y0 - 2, bw, bh, W / 2 - bw * sc / 2, 545 - bh * sc / 2, bw * sc, bh * sc);
+  }
+  x.textAlign = 'center'; x.textBaseline = 'alphabetic';
+  x.font = '700 54px "Dancing Script", cursive'; x.fillText(d.cau, W / 2, 940, W - 180);
+  x.textAlign = 'right'; x.font = '400 28px "Be Vietnam Pro", sans-serif'; x.fillText('Tặng', 700, 1095);
+  x.font = '700 34px "Be Vietnam Pro", sans-serif'; x.fillText(d.full, 700, 1138, 480);
+  x.font = '400 26px "Be Vietnam Pro", sans-serif'; x.fillText('Tết 2027', 700, 1176);
+  x.save(); x.translate(780, 1132); x.rotate(-.07);
+  x.fillStyle = red ? '#f5b93a' : '#c0161c'; x.beginPath(); x.roundRect(-50, -50, 100, 100, 12); x.fill();
+  x.strokeStyle = red ? '#7a090d' : '#fff2d8'; x.lineWidth = 4; x.strokeRect(-40, -40, 80, 80);
+  x.fillStyle = red ? '#7a090d' : '#fff2d8'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.font = '800 42px "Be Vietnam Pro", sans-serif'; x.fillText(d.seal, 0, 3); x.restore();
+  const blob = await new Promise(r => c.toBlob(r, 'image/png'));
+  const name = `xin-chu-${slug(d.chu)}-${slug(d.full)}.png`;
+  const file = new File([blob], name, { type: 'image/png' });
+  if (navigator.canShare && navigator.canShare({ files: [file] }) && matchMedia('(pointer:coarse)').matches) {
+    try { await navigator.share({ files: [file], title: `Chữ ${d.chu} tặng ${d.full}` }); return; } catch (e) { if (e.name === 'AbortError') return; }
+  }
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+}
+
+game({ id: 'ongdo', icon: '🖌️', title: 'Xin Chữ Ông Đồ', tag: 'Cả nhà', isNew: true,
+  desc: 'Nhập tên, ông đồ viết tặng chữ thư pháp hợp với tên.',
+  mount(st) {
+    let paper = store.get('tet27-paper', 'red'), cur = null, idx = 0;
+    st.innerHTML = `
+      <p class="desc">Đầu năm xin chữ lấy may! Nhập tên của bạn, ông đồ sẽ chọn một chữ hợp với ý nghĩa cái tên rồi viết tặng.</p>
+      <form class="ongdo-form" id="f">
+        <label class="name-field">Tên người xin chữ<input id="nm" maxlength="30" placeholder="VD: Nguyễn Minh An" autocomplete="off" required></label>
+        <div class="paper-pick" role="group" aria-label="Chọn loại giấy">
+          <button type="button" data-p="red"><i style="background:#c8141b"></i>Giấy điều đỏ</button>
+          <button type="button" data-p="do"><i style="background:#f3e3bf"></i>Giấy dó</button>
+        </div>
+        <button class="btn" id="go" type="submit">🖌️ Xin chữ</button>
+      </form>
+      <div id="out" aria-live="polite"></div>`;
+    const f = $('#f', st), nm = $('#nm', st), go = $('#go', st), out = $('#out', st);
+    const syncPaper = () => {
+      $$('.paper-pick button', st).forEach(b => b.setAttribute('aria-pressed', b.dataset.p === paper));
+      const p = $('.paper', out); if (p) p.className = `paper ${paper}${p.classList.contains('shown') ? ' shown' : ''}`;
+    };
+    $$('.paper-pick button', st).forEach(b => b.onclick = () => { paper = b.dataset.p; store.set('tet27-paper', paper); syncPaper(); sfx('flip'); });
+    syncPaper();
+
+    function write() {
+      const full = nm.value.trim().split(/\s+/).map(cap).join(' ');
+      const given = cap(full.split(' ').pop());
+      const k = cur.list[idx % cur.list.length], d = CHU[k];
+      cur.data = { chu: k, cau: d.c, full, paper, seal: given.charAt(0).toUpperCase() };
+      go.disabled = true;
+      out.innerHTML = `
+        <div class="scroll"><div class="rod"></div>
+          <div class="paper ${paper}">
+            <div class="p-top">Xuân Đinh Mùi</div>
+            <div class="chu-wrap"><div class="chu" style="--fs:${chuSize(k)}px">${esc(k)}</div><span class="brush" aria-hidden="true">🖌️</span></div>
+            <p class="p-wish">${esc(d.c)}</p>
+            <div class="p-foot"><div class="p-lk">Tặng<br><b>${esc(full)}</b><br>Tết 2027</div><div class="seal" aria-hidden="true">${esc(cur.data.seal)}</div></div>
+          </div><div class="rod"></div></div>
+        <div class="chu-why"><h4>Vì sao là chữ “${esc(k)}”?</h4><p>${idx === 0 ? cur.why : `Ông đồ viết thêm một chữ nữa cũng hợp với tên <b>${esc(given)}</b>.`}</p>
+          <p>Chữ <b>${esc(k)}</b> mang ý nghĩa ${esc(d.y)}.</p><p>✨ ${esc(d.w.replace('{n}', given))}</p></div>
+        <div class="row"><button class="btn" id="save" type="button" hidden>💾 Lưu ảnh chữ</button><button class="btn ghost" id="more" type="button" hidden>🔁 Xin chữ khác</button></div>`;
+      const chu = $('.chu', out), paperEl = $('.paper', out);
+      // fit & centre the real ink: brush swashes reach past the glyph box, so measure them on a canvas
+      const fit = () => {
+        const cx = document.createElement('canvas').getContext('2d'); cx.font = '100px Splash, cursive';
+        const m = cx.measureText(k), L = m.actualBoundingBoxLeft || 0, R = m.actualBoundingBoxRight || m.width;
+        const ink = Math.max(m.width, L + R), max = $('.chu-wrap', out).clientWidth - 20;
+        const fs = Math.min(chuSize(k), Math.floor(max * 100 / ink));
+        chu.style.setProperty('--fs', fs + 'px');
+        chu.style.transform = `translateX(${((m.width - R + L) / 2 * fs / 100).toFixed(1)}px)`;
+      };
+      fit(); document.fonts && document.fonts.load('100px Splash', k).then(fit, () => {});
+      out.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      T.after(() => {
+        chu.classList.add('write'); $('.brush', out).classList.add('go');
+        [0, 500, 1100].forEach(t => T.after(() => sfx('whoosh'), t));
+        T.after(() => {
+          chu.classList.remove('write'); chu.classList.add('done');
+          paperEl.classList.add('shown'); $('.chu-why', out).classList.add('shown');
+          $('#save', out).hidden = $('#more', out).hidden = false;
+          go.disabled = false; go.textContent = '🖌️ Xin chữ cho người khác';
+          sfx('bell'); fx.burst({ count: 60 });
+        }, reduceMotion ? 50 : 2000);
+      }, reduceMotion ? 0 : 450);
+      $('#more', out).onclick = () => { idx++; write(); };
+      $('#save', out).onclick = async e => {
+        const b = e.currentTarget; b.disabled = true; b.textContent = '⏳ Đang lưu…';
+        try { await saveChu(cur.data); } catch (err) { console.error(err); alert('Không lưu được ảnh, bạn thử chụp màn hình nhé!'); }
+        b.disabled = false; b.textContent = '💾 Lưu ảnh chữ';
+      };
+    }
+    f.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!nm.value.trim()) { nm.focus(); return; }
+      cur = chuForName(nm.value); idx = 0; write();
+    });
+  }
+});
+
+/* ---------- 14. Xăm Đức Thánh Trần ---------- */
+/* Original verses written for this game (not copied from any temple's set).
+   lv: level, p: 4-line lục bát, y: overall meaning, per-topic readings, k: advice */
+const XAM_TOPICS = [['gd', '🏠 Gia đạo'], ['cd', '💼 Công việc'], ['tl', '💰 Tài lộc'], ['sk', '💪 Sức khỏe'], ['hh', '📚 Học hành'], ['td', '💞 Tình duyên']];
+const XAM = [
+  { lv: 'Thượng Thượng', p: ['Rồng xanh gặp hội mây lành', 'Gió xuân đưa lối, công thành danh vang', 'Lòng ngay giữ trọn đạo vàng', 'Cửa nhà rạng rỡ, phúc tràn bốn phương'],
+    y: 'Thời vận đang lên, có thể bắt tay vào việc lớn.', gd: 'Nhà cửa êm ấm, sắp có tin vui.', cd: 'Thăng tiến, được cấp trên tin dùng.', tl: 'Tiền vào đều, có thêm lộc bất ngờ.', sk: 'Khỏe mạnh, tinh thần phấn chấn.', hh: 'Thi cử đỗ đạt cao.', td: 'Duyên đến đúng lúc, nên mạnh dạn.', k: 'Thành công rồi vẫn giữ lòng khiêm nhường.' },
+  { lv: 'Thượng Cát', p: ['Thuyền xuôi gặp lúc nước đầy', 'Buồm căng gió thuận, đến ngày sang sông', 'Việc làm chớ ngại long đong', 'Một lòng tiến bước, ắt xong mọi đường'],
+    y: 'Việc tính toán lâu nay đã đến lúc làm.', gd: 'Anh em hòa thuận, cùng nhau góp sức.', cd: 'Dự định cũ nay thuận lợi để khởi sự.', tl: 'Buôn bán có lời, mạnh tay vừa phải.', sk: 'Ổn định, nhớ ngủ đủ giấc.', hh: 'Học đều tay sẽ tiến bộ rõ.', td: 'Người thương ở gần, chịu khó quan tâm.', k: 'Đã quyết thì làm đến nơi đến chốn.' },
+  { lv: 'Trung Bình', p: ['Trăng non chưa tỏ đầu non', 'Đợi rằm mới sáng vẹn tròn trời cao', 'Đường dài chớ vội lao xao', 'Từng bước vững chãi, lẽ nào chẳng nên'],
+    y: 'Việc còn dở dang, cần thêm thời gian.', gd: 'Có chút bất đồng nhỏ, nhường nhau là êm.', cd: 'Chưa nên đổi việc, cứ làm tốt việc đang có.', tl: 'Tiền vào chậm, chi tiêu nên dè dặt.', sk: 'Để ý ăn uống, đừng thức khuya.', hh: 'Ôn lại từ gốc, nửa cuối năm tiến bộ.', td: 'Chưa vội, tìm hiểu thêm rồi hãy ngỏ lời.', k: 'Chậm mà chắc.' },
+  { lv: 'Thượng Thượng', p: ['Mai vàng nở rộ đầu xuân', 'Cả nhà sum họp, xa gần chúc nhau', 'Phúc lành trước, lộc theo sau', 'Một năm êm ả, sang giàu đến nơi'],
+    y: 'Quẻ rất tốt cho gia đạo, mọi sự sum vầy.', gd: 'Nhà có thêm người hoặc thêm niềm vui lớn.', cd: 'Được quý nhân nâng đỡ.', tl: 'Tài lộc dồi dào, nên để dành một phần.', sk: 'Người lớn trong nhà khỏe mạnh.', hh: 'Được khen thưởng, có giấy khen.', td: 'Gia đình hai bên đều ưng ý.', k: 'Nhớ chia niềm vui với họ hàng, xóm giềng.' },
+  { lv: 'Hạ Quẻ', p: ['Mây đen che khuất vầng dương', 'Người đi chớ vội lên đường hôm nay', 'Giữ mình qua lúc gió lay', 'Mây tan nắng lại sáng ngay góc trời'],
+    y: 'Đang có chút trắc trở, nên giữ mình, chờ thời.', gd: 'Tránh to tiếng, nóng giận dễ mất hòa khí.', cd: 'Chưa nên ký kết việc lớn trong tháng Giêng.', tl: 'Cẩn thận khi cho vay mượn.', sk: 'Đi đường cẩn thận, giữ ấm cơ thể.', hh: 'Kết quả chưa như ý, đừng nản.', td: 'Có hiểu lầm, nói chuyện thẳng thắn sẽ qua.', k: 'Lùi một bước, trời cao biển rộng.' },
+  { lv: 'Thượng Cát', p: ['Bạch Đằng sóng cuộn năm xưa', 'Cọc ngầm chờ nước, đợi vừa con triều', 'Mưu sâu chẳng cốt việc nhiều', 'Biết thời biết thế, trăm điều đều nên'],
+    y: 'Chuẩn bị kỹ, chờ đúng thời cơ sẽ thắng lớn, như trận Bạch Đằng năm 1288.', gd: 'Bàn bạc cả nhà rồi hãy làm việc lớn như sửa nhà, mua xe.', cd: 'Lên kế hoạch kỹ, cơ hội đến vào giữa năm.', tl: 'Đầu tư có tính toán sẽ có lời.', sk: 'Tập luyện đều đặn, sức bền tăng.', hh: 'Ôn bài có phương pháp, thi đạt kết quả tốt.', td: 'Kiên nhẫn, đúng người đúng thời.', k: 'Nghĩ kỹ trước khi làm, biết người biết ta.' },
+  { lv: 'Trung Bình', p: ['Cây non mới bén rễ sâu', 'Đừng mong trái ngọt, mai sau sẽ đầy', 'Ngày ngày vun xới tưới cây', 'Cuối năm quả ngọt trĩu tay đón mừng'],
+    y: 'Việc mới bắt đầu, cần chăm chút đều đặn.', gd: 'Con cháu cần được gần gũi, dạy dỗ thêm.', cd: 'Việc mới, chịu khó học hỏi.', tl: 'Lộc nhỏ đều đặn, tích tiểu thành đại.', sk: 'Bình thường, nên tập thể dục.', hh: 'Chăm chỉ mỗi ngày, cuối năm sẽ giỏi.', td: 'Tình cảm mới chớm, vun đắp từ từ.', k: 'Kiên trì thì cây nào cũng ra quả.' },
+  { lv: 'Thượng Cát', p: ['Ngựa hay gặp chủ biết dùng', 'Đường xa ngàn dặm, ung dung tới nơi', 'Có tài lại gặp đúng thời', 'Công danh rạng rỡ, người người ngợi khen'],
+    y: 'Tài năng được trọng dụng.', gd: 'Cha mẹ tự hào về con cái.', cd: 'Được giao việc quan trọng, cứ nhận.', tl: 'Thu nhập tăng nhờ tay nghề.', sk: 'Sung sức, dẻo dai.', hh: 'Được chọn đi thi học sinh giỏi.', td: 'Được người tài đức để ý.', k: 'Có tài phải đi cùng có đức.' },
+  { lv: 'Trung Bình', p: ['Giếng trong nước mát quanh năm', 'Người đi tìm nước xa xăm làm gì', 'Ngoảnh đầu thấy phúc tức thì', 'Chẳng cần cầu khẩn, chẳng đi đâu xa'],
+    y: 'Điều tốt ở ngay bên cạnh, chớ mải tìm nơi xa.', gd: 'Người nhà là chỗ dựa vững nhất.', cd: 'Cơ hội ở ngay nơi đang làm.', tl: 'Giữ tiền chắc, đừng nghe lời rủ làm giàu nhanh.', sk: 'Ăn uống điều độ là đủ khỏe.', hh: 'Hỏi thầy cô, bạn bè ngay bên mình.', td: 'Người hợp ở rất gần.', k: 'Biết đủ là đủ.' },
+  { lv: 'Thượng Thượng', p: ['Trống đồng rộn rã ngày xuân', 'Muôn nhà mở hội, toàn dân vui vầy', 'Trên hòa dưới thuận từ đây', 'Muôn điều như ý, đủ đầy ấm no'],
+    y: 'Đồng lòng thì việc gì cũng thành.', gd: 'Cả nhà một lòng, việc lớn trong nhà đều thuận.', cd: 'Làm việc nhóm rất tốt.', tl: 'Hùn hạp với người tin cậy có lời.', sk: 'Tinh thần vui, sức khỏe tốt.', hh: 'Học nhóm hiệu quả.', td: 'Được hai bên gia đình ủng hộ.', k: 'Đức Thánh Trần luôn coi trọng trên dưới đồng lòng, anh em hòa mục. Nhà đồng lòng thì khó nào cũng qua.' },
+  { lv: 'Hạ Quẻ', p: ['Đường trơn mưa lớn chưa ngừng', 'Bước chân chậm lại, xin đừng vội qua', 'Giữ lời, giữ ý, giữ nhà', 'Qua cơn mưa gió, trời đà lại trong'],
+    y: 'Có trắc trở nhỏ, cẩn trọng lời nói và việc làm.', gd: 'Tránh tranh cãi chuyện tiền bạc trong nhà.', cd: 'Cẩn thận giấy tờ, đọc kỹ trước khi ký.', tl: 'Không nên vay mượn để đầu tư.', sk: 'Chú ý đi lại, nhất là khi trời mưa.', hh: 'Đừng chủ quan, xem lại bài cũ.', td: 'Nghe nhiều hơn nói.', k: 'Cẩn tắc vô áy náy.' },
+  { lv: 'Thượng Cát', p: ['Én bay báo hiệu xuân về', 'Đồng xanh lúa tốt, bốn bề yên vui', 'Gieo gì gặt nấy, chớ lùi', 'Chăm tay chăm việc, ngọt bùi đầy kho'],
+    y: 'Làm ăn thuận, chăm chỉ ắt được đền đáp.', gd: 'Nhà cửa vui vẻ, có khách quý đến chơi.', cd: 'Công việc tiến triển đều.', tl: 'Buôn bán đắt hàng, thu hoạch tốt.', sk: 'Khỏe khoắn.', hh: 'Siêng năng sẽ được điểm cao.', td: 'Có tin vui từ phương xa.', k: 'Gieo nhân lành, gặt quả ngọt.' },
+  { lv: 'Trung Bình', p: ['Thuyền nan ngược gió sông dài', 'Cùng nhau đều nhịp, chẳng ai quản gì', 'Gian nan rồi cũng qua đi', 'Bến bờ phía trước, ngại chi sóng cồn'],
+    y: 'Có khó khăn nhưng vượt được nếu bền chí.', gd: 'Cả nhà cùng chung tay qua việc khó.', cd: 'Việc nhiều áp lực, kiên trì sẽ được ghi nhận.', tl: 'Thu chi vừa đủ, chưa dư dả.', sk: 'Đừng làm quá sức.', hh: 'Môn khó cần thêm thời gian, đừng bỏ.', td: 'Có thử thách nhỏ, vượt qua thì bền lâu.', k: 'Đi chậm cũng được, miễn đừng dừng lại.' },
+  { lv: 'Thượng Thượng', p: ['Đại bàng sải cánh trời cao', 'Vượt mây vượt gió, nơi nào cũng qua', 'Chí lớn rạng rỡ cửa nhà', 'Tên vàng ghi tạc, gần xa nức lòng'],
+    y: 'Chí lớn gặp thời, có thể làm việc lớn.', gd: 'Nhà có người thành đạt, cả họ vui lây.', cd: 'Thăng tiến, có thể mở rộng việc làm ăn.', tl: 'Có khoản lớn về tay.', sk: 'Rất tốt.', hh: 'Đạt giải, đỗ vào trường mong muốn.', td: 'Gặp người cùng chí hướng.', k: 'Hịch tướng sĩ có câu “tới bữa quên ăn, nửa đêm vỗ gối”: có chí lớn và dốc lòng thì mới nên việc lớn.' },
+  { lv: 'Trung Bình', p: ['Ruộng khô đang đợi mưa rào', 'Trời còn chưa đổ, lẽ nào bỏ đi', 'Đắp bờ, giữ nước, phòng khi', 'Mưa về ruộng tốt, xanh rì lúa non'],
+    y: 'Chuẩn bị sẵn sàng, cơ hội sẽ tới.', gd: 'Lo trước cho việc lớn của nhà.', cd: 'Trau dồi kỹ năng, chờ cơ hội.', tl: 'Tiết kiệm, có quỹ phòng thân.', sk: 'Nên đi khám sức khỏe định kỳ.', hh: 'Chuẩn bị bài trước khi đến lớp.', td: 'Cứ làm mình tốt hơn, duyên sẽ đến.', k: 'Có chuẩn bị thì chẳng phải lo.' },
+  { lv: 'Thượng Cát', p: ['Cầu xưa nối nhịp đôi bờ', 'Người qua kẻ lại, đợi chờ gì đâu', 'Mở lòng kết nghĩa bền lâu', 'Bạn hiền giúp sức, trước sau vẹn tình'],
+    y: 'Có quý nhân, bạn bè giúp đỡ.', gd: 'Họ hàng, láng giềng giúp nhau nhiều.', cd: 'Có người giới thiệu việc tốt.', tl: 'Hợp tác cùng bạn cũ có lời.', sk: 'Đi chơi cùng bạn bè, tinh thần thoải mái.', hh: 'Có bạn học giỏi kèm cặp.', td: 'Được mai mối, nên gặp thử.', k: 'Sống có nghĩa có tình, đi đâu cũng có người giúp.' },
+  { lv: 'Hạ Quẻ', p: ['Lửa rơm bùng cháy nhanh tàn', 'Giận thì mất khôn, muộn màng ăn năn', 'Lặng yên chớ có cằn nhằn', 'Lòng yên thì việc khó khăn cũng qua'],
+    y: 'Dễ vì nóng giận mà hỏng việc, nên giữ bình tĩnh.', gd: 'Nhịn nhau một câu, nhà êm cả năm.', cd: 'Tránh va chạm với đồng nghiệp.', tl: 'Đừng quyết chuyện tiền bạc lúc đang giận.', sk: 'Chú ý huyết áp, ngủ đủ giấc.', hh: 'Bình tĩnh khi làm bài thi.', td: 'Hờn giận nhỏ, ai xin lỗi trước người ấy thắng.', k: 'Một điều nhịn, chín điều lành.' },
+  { lv: 'Trung Bình', p: ['Đèn khuya soi trang sách hiền', 'Học thêm điều mới, ưu phiền nhẹ vơi', 'Chữ thầy dạy nhớ trọn đời', 'Mai sau thành đạt nhớ lời thầy xưa'],
+    y: 'Năm nên học hỏi, mở mang hiểu biết.', gd: 'Dành thời gian đọc sách cùng con.', cd: 'Học thêm nghề, thêm chứng chỉ.', tl: 'Đầu tư cho học hành là khoản lời nhất.', sk: 'Đừng thức quá khuya.', hh: 'Rất tốt cho việc học, thi cử thuận.', td: 'Có thể gặp nhau nơi lớp học.', k: 'Học, học nữa, học mãi.' },
+  { lv: 'Thượng Cát', p: ['Cây cao nhớ cội nhớ nguồn', 'Con hiền cháu thảo, chẳng buồn chẳng lo', 'Ông bà mạnh khỏe ấm no', 'Phúc dày đức lớn, trời cho dồi dào'],
+    y: 'Có hiếu thì có phúc.', gd: 'Ông bà, cha mẹ khỏe mạnh, sống vui.', cd: 'Việc thuận nhờ phúc đức ông bà để lại.', tl: 'Có lộc từ người thân trong nhà.', sk: 'Cả nhà khỏe.', hh: 'Học giỏi làm vui lòng cha mẹ.', td: 'Người hiếu thảo sẽ gặp người hiếu thảo.', k: 'Năm nay gọi điện, về thăm ông bà cha mẹ nhiều hơn.' },
+  { lv: 'Thượng Thượng', p: ['Gốc sâu thì lá mới xanh', 'Rễ bền cây vững, trĩu cành quả thơm', 'Nhà nhà no ấm chén cơm', 'Trên thương dưới kính, sớm hôm thuận hòa'],
+    y: 'Nền tảng vững chắc, phúc lộc lâu bền.', gd: 'Gia đạo bền vững, con cháu thảo hiền.', cd: 'Sự nghiệp ổn định lâu dài.', tl: 'Của cải tích lũy bền.', sk: 'Khỏe mạnh, sống thọ.', hh: 'Nền tảng vững, học lên cao tốt.', td: 'Tình cảm bền chặt, hợp tính nhau.', k: 'Đức Thánh Trần dặn “khoan thư sức dân để làm kế sâu rễ bền gốc”. Trong nhà cũng vậy: thương nhau, đỡ nhau thì nhà bền.' }
+];
+const XAM_LV_CLASS = { 'Thượng Thượng': 'tt', 'Thượng Cát': 'tc', 'Trung Bình': 'tb', 'Hạ Quẻ': 'hq' };
+
+game({ id: 'thanhtran', icon: '⚔️', title: 'Xăm Đức Thánh Trần', tag: 'Đầu năm', isNew: true,
+  desc: 'Thắp hương, lắc ống xăm, gieo keo xin quẻ đầu năm.',
+  mount(st) {
+    let topic = 'gd', step = 'start', no = 0, tries = 0;
+    st.innerHTML = `
+      <p class="desc">Đầu năm xin một quẻ xăm Đức Thánh Trần Hưng Đạo. Thành tâm khấn điều mình muốn hỏi, lắc ống xăm rồi gieo keo: được <b>một sấp một ngửa</b> mới là Thánh đồng ý.</p>
+      <div class="altar">
+        <div class="altar-hd"><span>Đức Thánh Trần</span><small>Hưng Đạo Đại Vương</small></div>
+        <div class="altar-row">
+          <div class="incense" id="inc" aria-hidden="true"><div class="smoke"><i></i><i></i><i></i></div><div class="tt-sticks"><b></b><b></b><b></b></div><div class="tt-bowl"></div></div>
+          <div class="tube-wrap xt" id="tw"><div class="sticks">${'<i></i>'.repeat(9)}</div><div class="tube"><span>Xăm</span></div><div class="stick-no" id="sn" hidden></div></div>
+          <div class="keo-pair" id="kp" aria-hidden="true"><span class="keo"></span><span class="keo"></span></div>
+        </div>
+      </div>
+      <label class="name-field">Tên người xin quẻ (không bắt buộc)<input id="nm" maxlength="30" placeholder="VD: Lê Hoàng Minh" autocomplete="off"></label>
+      <p class="topic-lb">Điều muốn hỏi</p>
+      <div class="paper-pick topics" role="group" aria-label="Điều muốn hỏi">${XAM_TOPICS.map(([k, t]) => `<button type="button" data-t="${k}" aria-pressed="${k === topic}">${t}</button>`).join('')}</div>
+      <p class="xam-msg" id="msg" aria-live="polite">Bước 1: thắp ba nén hương và khấn.</p>
+      <button class="btn" id="go" type="button">🙏 Thắp hương khấn</button>
+      <div id="out" aria-live="polite"></div>
+      <p class="xam-note">Các quẻ trong trò này do web soạn để vui đầu năm, lấy cảm hứng từ lời răn của Đức Thánh Trần, không phải bản quẻ của đền nào.</p>`;
+    const go = $('#go', st), msg = $('#msg', st), out = $('#out', st), tw = $('#tw', st), sn = $('#sn', st), kp = $('#kp', st), inc = $('#inc', st);
+    $$('.topics button', st).forEach(b => b.onclick = () => {
+      topic = b.dataset.t; $$('.topics button', st).forEach(x => x.setAttribute('aria-pressed', x === b)); sfx('flip');
+    });
+    const setStep = (s, label, text) => { step = s; go.textContent = label; msg.innerHTML = text; go.disabled = false; };
+
+    function light() {
+      go.disabled = true; inc.classList.add('lit'); sfx('bell');
+      const nm = $('#nm', st).value.trim();
+      msg.innerHTML = `Con${nm ? ` là <b>${esc(nm)}</b>` : ''} thành tâm kính lễ, xin Đức Thánh cho con một quẻ về <b>${esc(XAM_TOPICS.find(t => t[0] === topic)[1].slice(3))}</b>…`;
+      T.after(() => setStep('shake', '🎋 Lắc ống xăm', 'Bước 2: lắc ống xăm cho một que rơi ra.'), reduceMotion ? 300 : 2200);
+    }
+    function shake() {
+      go.disabled = true; out.innerHTML = ''; sn.hidden = true; kp.className = 'keo-pair';
+      $$('.sticks i', tw).forEach(i => i.classList.remove('out'));
+      tw.classList.add('shake'); sfx('sticks', 1.6);
+      T.after(() => {
+        tw.classList.remove('shake'); pick($$('.sticks i', tw)).classList.add('out'); sfx('click');
+        no = randInt(1, XAM.length); sn.textContent = no; sn.hidden = false;
+        setStep('toss', '🪙 Gieo keo xin ý', `Que xăm số <b>${no}</b> đã rơi ra. Bước 3: gieo keo xem Thánh có đồng ý quẻ này không.`);
+      }, reduceMotion ? 200 : 1600);
+    }
+    function toss() {
+      go.disabled = true; tries++;
+      // âm dương (one up one down) = yes; after a couple of misses the gods are kind
+      const r = tries >= 3 ? 0 : Math.random(), res = r < .5 ? 'thanh' : r < .75 ? 'cuoi' : 'am';
+      const faces = res === 'thanh' ? shuffle(['up', 'down']) : res === 'cuoi' ? ['up', 'up'] : ['down', 'down'];
+      kp.className = 'keo-pair'; void kp.offsetWidth; kp.classList.add('toss'); sfx('whoosh');
+      T.after(() => {
+        kp.classList.remove('toss'); $$('.keo', kp).forEach((k, i) => k.className = 'keo ' + faces[i]); sfx('flip');
+        if (res === 'thanh') { tries = 0; msg.innerHTML = '✨ Một sấp một ngửa: <b>Thánh đồng ý</b>. Mời xem quẻ.'; show(); }
+        else if (res === 'cuoi') setStep('toss', '🪙 Gieo keo lại', 'Hai mặt ngửa: Thánh cười, chưa trả lời. Mời gieo keo lại.');
+        else { tries = 0; setStep('shake', '🎋 Lắc lại ống xăm', 'Hai mặt sấp: Thánh chưa thuận quẻ này. Mời lắc ống xăm xin quẻ khác.'); }
+      }, reduceMotion ? 200 : 1300);
+    }
+    function show() {
+      const q = XAM[no - 1], nm = $('#nm', st).value.trim(), main = XAM_TOPICS.find(t => t[0] === topic);
+      out.innerHTML = `
+        <article class="xam-card ${XAM_LV_CLASS[q.lv]}">
+          <div class="xam-top"><span>Quẻ số ${no}</span><b>${esc(q.lv)}</b></div>
+          ${nm ? `<p class="f-for">Quẻ của <b>${esc(nm)}</b> · Xuân Đinh Mùi 2027</p>` : ''}
+          <blockquote class="xam-poem">${q.p.map(l => `<span>${esc(l)}</span>`).join('')}</blockquote>
+          <p class="xam-y"><b>Ý quẻ:</b> ${esc(q.y)}</p>
+          <div class="xam-main"><b>${main[1]}</b><p>${esc(q[topic])}</p></div>
+          <details class="xam-more"><summary>Xem các việc khác</summary><ul>${XAM_TOPICS.filter(t => t[0] !== topic).map(([k, t]) => `<li><b>${t}:</b> ${esc(q[k])}</li>`).join('')}</ul></details>
+          <p class="f-tip">🙏 <b>Lời khuyên:</b> ${esc(q.k)}</p>
+          ${q.lv === 'Hạ Quẻ' ? '<p class="xam-soft">Quẻ hạ không phải điềm xấu, chỉ là lời nhắc năm nay nên cẩn trọng hơn một chút.</p>' : ''}
+        </article>`;
+      setStep('shake', '🎋 Xin quẻ cho người khác', msg.innerHTML);
+      sfx('bell');
+      q.lv === 'Thượng Thượng' ? fx.fireworks() : fx.burst({ count: 50 });
+      out.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });
+    }
+    go.onclick = () => ({ start: light, shake, toss }[step] || light)();
   }
 });
 
