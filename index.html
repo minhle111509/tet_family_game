@@ -396,15 +396,18 @@ footer b{font-family:var(--font-script);font-size:26px;color:var(--gold-200);fon
 .shrine::before{content:'';position:absolute;left:50%;top:44%;width:min(300px,80vw);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,214,107,.42),rgba(255,214,107,0) 65%);transition:opacity .8s;opacity:.65;pointer-events:none}
 .altar.lit .shrine::before{opacity:1;animation:halo 2.6s ease-in-out infinite alternate}
 @keyframes halo{from{opacity:.75}to{opacity:1}}
-.shrine-img{position:relative;margin:0;width:150px;aspect-ratio:224/474;border-radius:75px 75px 12px 12px;overflow:hidden;border:3px solid var(--gold-400);box-shadow:0 0 0 5px rgba(122,9,13,.9),0 0 0 7px rgba(255,214,107,.55),0 14px 28px rgba(0,0,0,.5)}
+.shrine-img{position:relative;margin:0;width:210px;aspect-ratio:375/485;background:#14090a;border-radius:105px 105px 12px 12px;overflow:hidden;border:3px solid var(--gold-400);box-shadow:0 0 0 5px rgba(122,9,13,.9),0 0 0 7px rgba(255,214,107,.55),0 14px 28px rgba(0,0,0,.5)}
 .shrine-img img{display:block;width:100%;height:100%;object-fit:cover}
 .candle{position:relative;width:16px;height:64px;border-radius:4px;background:linear-gradient(90deg,#9e0d13,#e8323a 50%,#9e0d13);box-shadow:0 4px 8px rgba(0,0,0,.4)}
 .candle::before{content:'';position:absolute;left:50%;top:-20px;width:10px;height:18px;margin-left:-5px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 70%,#fff6c8,#ffb43a 60%,rgba(255,120,30,0) 72%);box-shadow:0 0 10px 3px rgba(255,170,60,.55);will-change:transform;animation:flame 1.1s ease-in-out infinite alternate;transform-origin:50% 100%}
 .candle.r::before{animation-delay:-.5s}
 @keyframes flame{0%{transform:scale(1) rotate(-3deg)}100%{transform:scale(1.12,1.2) rotate(3deg)}}
 .xam-actions{margin-top:16px}
-@media (max-width:480px){.shrine-img{width:124px}.shrine{gap:12px}.candle{width:13px;height:52px}}
+@media (max-width:480px){.shrine-img{width:min(190px,52vw)}.shrine{gap:12px}.candle{width:13px;height:52px}}
 @media (prefers-reduced-motion:reduce){.candle::before,.altar.lit .shrine::before{animation:none}}
+.khan-grid{display:grid;grid-template-columns:2fr 1fr;gap:4px 12px;max-width:520px;margin:0 auto}
+.khan-grid .name-field{max-width:none;margin:0 0 6px}
+.khan-grid .wide{grid-column:1/-1}
 .xam-top span,.xam-top b{white-space:nowrap}
 @media (max-width:480px){.altar-row{flex-wrap:wrap;row-gap:6px}.keo-pair{order:3;flex-basis:100%;justify-content:center;padding:10px 0 0}.xam-card{padding:18px 14px}.xam-top{letter-spacing:.06em}.xam-top b{font-size:13px;padding:4px 10px}.xam-poem{font-size:17px;padding:12px 4px;line-height:1.55}.xam-poem span:nth-child(odd){padding-right:0}.altar-row{min-height:210px}.incense{width:64px;transform:scale(.85);transform-origin:bottom}.keo{width:36px;height:20px}}
 
@@ -1831,7 +1834,7 @@ game({ id: 'ongdo', icon: '🖌️', title: 'Xin Chữ Ông Đồ', tag: 'Cả n
    lv: level, p: 4-line lục bát, y: overall meaning, per-topic readings, k: advice */
 const XAM_TOPICS = [['gd', '🏠 Gia đạo'], ['cd', '💼 Công việc'], ['tl', '💰 Tài lộc'], ['sk', '💪 Sức khỏe'], ['hh', '📚 Học hành'], ['td', '💞 Tình duyên']];
 const XAM = [
-  { lv: 'Thượng Thượng', p: ['Rồng xanh gặp hội mây lành', 'Gió xuân đưa lối, công thành danh vang', 'Lòng ngay giữ trọn đạo vàng', 'Cửa nhà rạng rỡ, phúc tràn bốn phương'],
+  { lv: 'Thượng Thượng', p: ['Rồng xanh gặp hội mây lành', 'Gió xuân đưa lối, công thành danh vang', 'Lòng ngay giữ trọn đạo vàng', 'Cửa nhà rạng rỡ, rộn ràng bốn phương'],
     y: 'Thời vận đang lên, có thể bắt tay vào việc lớn.', gd: 'Nhà cửa êm ấm, sắp có tin vui.', cd: 'Thăng tiến, được cấp trên tin dùng.', tl: 'Tiền vào đều, có thêm lộc bất ngờ.', sk: 'Khỏe mạnh, tinh thần phấn chấn.', hh: 'Thi cử đỗ đạt cao.', td: 'Duyên đến đúng lúc, nên mạnh dạn.', k: 'Thành công rồi vẫn giữ lòng khiêm nhường.' },
   { lv: 'Thượng Cát', p: ['Thuyền xuôi gặp lúc nước đầy', 'Buồm căng gió thuận, đến ngày sang sông', 'Việc làm chớ ngại long đong', 'Một lòng tiến bước, ắt xong mọi đường'],
     y: 'Việc tính toán lâu nay đã đến lúc làm.', gd: 'Anh em hòa thuận, cùng nhau góp sức.', cd: 'Dự định cũ nay thuận lợi để khởi sự.', tl: 'Buôn bán có lời, mạnh tay vừa phải.', sk: 'Ổn định, nhớ ngủ đủ giấc.', hh: 'Học đều tay sẽ tiến bộ rõ.', td: 'Người thương ở gần, chịu khó quan tâm.', k: 'Đã quyết thì làm đến nơi đến chốn.' },
@@ -1863,14 +1866,74 @@ const XAM = [
     y: 'Chuẩn bị sẵn sàng, cơ hội sẽ tới.', gd: 'Lo trước cho việc lớn của nhà.', cd: 'Trau dồi kỹ năng, chờ cơ hội.', tl: 'Tiết kiệm, có quỹ phòng thân.', sk: 'Nên đi khám sức khỏe định kỳ.', hh: 'Chuẩn bị bài trước khi đến lớp.', td: 'Cứ làm mình tốt hơn, duyên sẽ đến.', k: 'Có chuẩn bị thì chẳng phải lo.' },
   { lv: 'Thượng Cát', p: ['Cầu xưa nối nhịp đôi bờ', 'Người qua kẻ lại, đợi chờ gì đâu', 'Mở lòng kết nghĩa bền lâu', 'Bạn hiền giúp sức, trước sau vẹn tình'],
     y: 'Có quý nhân, bạn bè giúp đỡ.', gd: 'Họ hàng, láng giềng giúp nhau nhiều.', cd: 'Có người giới thiệu việc tốt.', tl: 'Hợp tác cùng bạn cũ có lời.', sk: 'Đi chơi cùng bạn bè, tinh thần thoải mái.', hh: 'Có bạn học giỏi kèm cặp.', td: 'Được mai mối, nên gặp thử.', k: 'Sống có nghĩa có tình, đi đâu cũng có người giúp.' },
-  { lv: 'Hạ Quẻ', p: ['Lửa rơm bùng cháy nhanh tàn', 'Giận thì mất khôn, muộn màng ăn năn', 'Lặng yên chớ có cằn nhằn', 'Lòng yên thì việc khó khăn cũng qua'],
+  { lv: 'Hạ Quẻ', p: ['Lửa rơm bùng cháy vội vàng', 'Giận thì mất khôn, muộn màng ăn năn', 'Lặng yên chớ có cằn nhằn', 'Lòng yên thì việc khó khăn cũng qua'],
     y: 'Dễ vì nóng giận mà hỏng việc, nên giữ bình tĩnh.', gd: 'Nhịn nhau một câu, nhà êm cả năm.', cd: 'Tránh va chạm với đồng nghiệp.', tl: 'Đừng quyết chuyện tiền bạc lúc đang giận.', sk: 'Chú ý huyết áp, ngủ đủ giấc.', hh: 'Bình tĩnh khi làm bài thi.', td: 'Hờn giận nhỏ, ai xin lỗi trước người ấy thắng.', k: 'Một điều nhịn, chín điều lành.' },
   { lv: 'Trung Bình', p: ['Đèn khuya soi trang sách hiền', 'Học thêm điều mới, ưu phiền nhẹ vơi', 'Chữ thầy dạy nhớ trọn đời', 'Mai sau thành đạt nhớ lời thầy xưa'],
     y: 'Năm nên học hỏi, mở mang hiểu biết.', gd: 'Dành thời gian đọc sách cùng con.', cd: 'Học thêm nghề, thêm chứng chỉ.', tl: 'Đầu tư cho học hành là khoản lời nhất.', sk: 'Đừng thức quá khuya.', hh: 'Rất tốt cho việc học, thi cử thuận.', td: 'Có thể gặp nhau nơi lớp học.', k: 'Học, học nữa, học mãi.' },
   { lv: 'Thượng Cát', p: ['Cây cao nhớ cội nhớ nguồn', 'Con hiền cháu thảo, chẳng buồn chẳng lo', 'Ông bà mạnh khỏe ấm no', 'Phúc dày đức lớn, trời cho dồi dào'],
     y: 'Có hiếu thì có phúc.', gd: 'Ông bà, cha mẹ khỏe mạnh, sống vui.', cd: 'Việc thuận nhờ phúc đức ông bà để lại.', tl: 'Có lộc từ người thân trong nhà.', sk: 'Cả nhà khỏe.', hh: 'Học giỏi làm vui lòng cha mẹ.', td: 'Người hiếu thảo sẽ gặp người hiếu thảo.', k: 'Năm nay gọi điện, về thăm ông bà cha mẹ nhiều hơn.' },
   { lv: 'Thượng Thượng', p: ['Gốc sâu thì lá mới xanh', 'Rễ bền cây vững, trĩu cành quả thơm', 'Nhà nhà no ấm chén cơm', 'Trên thương dưới kính, sớm hôm thuận hòa'],
-    y: 'Nền tảng vững chắc, phúc lộc lâu bền.', gd: 'Gia đạo bền vững, con cháu thảo hiền.', cd: 'Sự nghiệp ổn định lâu dài.', tl: 'Của cải tích lũy bền.', sk: 'Khỏe mạnh, sống thọ.', hh: 'Nền tảng vững, học lên cao tốt.', td: 'Tình cảm bền chặt, hợp tính nhau.', k: 'Đức Thánh Trần dặn “khoan thư sức dân để làm kế sâu rễ bền gốc”. Trong nhà cũng vậy: thương nhau, đỡ nhau thì nhà bền.' }
+    y: 'Nền tảng vững chắc, phúc lộc lâu bền.', gd: 'Gia đạo bền vững, con cháu thảo hiền.', cd: 'Sự nghiệp ổn định lâu dài.', tl: 'Của cải tích lũy bền.', sk: 'Khỏe mạnh, sống thọ.', hh: 'Nền tảng vững, học lên cao tốt.', td: 'Tình cảm bền chặt, hợp tính nhau.', k: 'Đức Thánh Trần dặn “khoan thư sức dân để làm kế sâu rễ bền gốc”. Trong nhà cũng vậy: thương nhau, đỡ nhau thì nhà bền.' },
+  { lv: 'Thượng Cát', p: ['Sen hồng nở giữa đầm xanh', 'Gần bùn chẳng nhuốm, thơm lành gió đưa', 'Giữ lòng trong sạch sớm trưa', 'Người thương kẻ mến, nắng mưa chẳng sờn'],
+    y: 'Giữ mình ngay thẳng thì được người quý trọng.', gd: 'Nhà có nề nếp, con cháu ngoan.', cd: 'Được tin tưởng nhờ làm việc trung thực.', tl: 'Tiền bạc rõ ràng, chắc chắn.', sk: 'Tâm an thì thân khỏe.', hh: 'Tự giác học, được thầy cô quý.', td: 'Gặp người chân thành.', k: 'Sống ngay thẳng thì chẳng phải sợ ai.' },
+  { lv: 'Trung Bình', p: ['Bến chiều đò đợi khách sang', 'Chờ thêm chút nữa, nhịp nhàng sẽ qua', 'Sớm hôm chẳng phải đâu xa', 'Kiên tâm đợi gió, thuận đà sang ngang'],
+    y: 'Việc đang chờ thời, kiên nhẫn thêm ít lâu.', gd: 'Việc nhà chưa quyết, đợi qua rằm tháng Giêng hãy bàn.', cd: 'Hồ sơ, giấy tờ còn chờ, đừng sốt ruột.', tl: 'Tiền về chậm nhưng chắc chắn có về.', sk: 'Nghỉ ngơi hợp lý.', hh: 'Kết quả đến muộn nhưng ổn.', td: 'Người ấy còn đang suy nghĩ, hãy cho thêm thời gian.', k: 'Nóng vội thì hỏng, chờ được thì thành.' },
+  { lv: 'Thượng Thượng', p: ['Đồng vàng lúa chín thơm hương', 'Mùa vui gặt hái, kho lương đầy tràn', 'Nhà nhà đỏ lửa chứa chan', 'Bao năm vất vả, muôn vàn đền công'],
+    y: 'Gặt hái thành quả sau thời gian cố gắng.', gd: 'Nhà sung túc, có của ăn của để.', cd: 'Được thưởng, được ghi nhận xứng đáng.', tl: 'Thu hoạch lớn, tài lộc vượng.', sk: 'Khỏe mạnh, ăn ngon ngủ yên.', hh: 'Thi đâu đỗ đó, điểm cao.', td: 'Tình cảm chín muồi, có thể tính chuyện lâu dài.', k: 'Được mùa nhớ để dành cho mùa sau.' },
+  { lv: 'Thượng Cát', p: ['Gió đông thổi ấm muôn nhà', 'Cành khô đâm lộc, nở hoa ven đường', 'Muộn phiền tan tựa hạt sương', 'Nắng lên rực rỡ, muôn phương thênh thang'],
+    y: 'Chuyện khó khăn cũ qua đi, bắt đầu giai đoạn mới tốt hơn.', gd: 'Hiểu lầm trong nhà được hóa giải.', cd: 'Có hướng đi mới sáng sủa hơn.', tl: 'Khoản kẹt lâu nay được gỡ.', sk: 'Bệnh cũ thuyên giảm.', hh: 'Môn yếu tiến bộ rõ.', td: 'Nối lại tình cũ hoặc gặp người mới hợp hơn.', k: 'Để chuyện buồn lại năm cũ, bước tiếp thật nhẹ nhàng.' },
+  { lv: 'Hạ Quẻ', p: ['Thuyền nhỏ chở nặng sông sâu', 'Tham nhiều dễ đắm, mai sau khó lường', 'Bớt đi một ít cũng thường', 'Thuyền nhẹ lướt sóng, con đường bình an'],
+    y: 'Ôm đồm quá sức dễ hỏng việc, nên bớt tham.', gd: 'Đừng gánh hết việc nhà một mình, hãy chia cho mọi người.', cd: 'Nhận ít việc mà làm cho tốt.', tl: 'Không nên đầu tư dàn trải hay ham lời to.', sk: 'Đang làm quá sức, cần nghỉ ngơi.', hh: 'Học vừa sức, đừng đăng ký quá nhiều lớp.', td: 'Đừng đòi hỏi quá nhiều ở người kia.', k: 'Biết đủ thì vui, biết dừng thì yên.' },
+  { lv: 'Trung Bình', p: ['Thỏi sắt mài mãi thành kim', 'Công phu chẳng phụ, người tìm ắt ra', 'Chớ than đường hãy còn xa', 'Mỗi ngày một bước, ắt là tới nơi'],
+    y: 'Việc cần bền bỉ lâu dài mới thành.', gd: 'Vun đắp từng chút, nhà sẽ ấm.', cd: 'Rèn tay nghề đều đặn.', tl: 'Tiết kiệm đều đặn mỗi tháng.', sk: 'Tập thể dục mỗi ngày.', hh: 'Mỗi ngày học một ít, cuối năm giỏi hẳn.', td: 'Tình cảm cần vun đắp lâu dài.', k: 'Có công mài sắt, có ngày nên kim.' },
+  { lv: 'Thượng Thượng', p: ['Hạc vàng bay giữa trời xuân', 'Mây lành năm sắc, xa gần mừng vui', 'Lộc đầy chẳng phải ngậm ngùi', 'Trăm năm sống thọ, ngọt bùi bên nhau'],
+    y: 'Phúc thọ song toàn, rất tốt cho người lớn tuổi.', gd: 'Ông bà sống thọ, con cháu sum vầy.', cd: 'Ổn định, được kính trọng.', tl: 'Đủ đầy, không thiếu thốn.', sk: 'Rất tốt, sống lâu khỏe mạnh.', hh: 'Được người lớn khen, học vui.', td: 'Bền lâu, đầu bạc răng long.', k: 'Kính già thì già để tuổi cho.' },
+  { lv: 'Thượng Cát', p: ['Bếp hồng lửa ấm đêm đông', 'Nồi bánh nghi ngút, vợ chồng bên nhau', 'Chuyện vui kể mãi canh thâu', 'Một nhà đầm ấm, dài lâu thuận hòa'],
+    y: 'Gia đình đầm ấm là phúc lớn nhất.', gd: 'Vợ chồng hòa thuận, con cái quây quần.', cd: 'Hậu phương vững nên yên tâm làm việc.', tl: 'Chi tiêu hợp lý, nhà đủ đầy.', sk: 'Ăn cơm nhà nhiều hơn sẽ khỏe.', hh: 'Cả nhà cùng giúp con học.', td: 'Tình cảm ấm áp, bền chặt.', k: 'Dành nhiều bữa cơm hơn cho gia đình.' },
+  { lv: 'Trung Bình', p: ['Đường đi chia lối hai bên', 'Đứng lâu chẳng bước, chẳng nên việc gì', 'Hỏi người từng trải đường đi', 'Chọn rồi thì bước, ngại chi dặm trường'],
+    y: 'Đang phân vân lựa chọn, nên hỏi người có kinh nghiệm rồi quyết.', gd: 'Bàn với người lớn trong nhà trước khi quyết.', cd: 'Đứng trước hai lựa chọn, chọn nơi ổn định hơn.', tl: 'Chưa rõ thì đừng xuống tiền.', sk: 'Đi khám để biết rõ, đừng tự đoán bệnh.', hh: 'Chọn ngành theo sở thích và khả năng.', td: 'Lòng còn lưỡng lự, hãy hỏi kỹ lòng mình.', k: 'Hỏi kỹ rồi quyết, quyết rồi đừng ngoảnh lại.' },
+  { lv: 'Thượng Cát', p: ['Mưa xuân lất phất cánh đồng', 'Trời yên biển lặng, mênh mông xanh rờn', 'Việc làm như ý chẳng sờn', 'Tiền vào như nước, lộc ơn trời ban'],
+    y: 'Mọi việc thuận buồm xuôi gió.', gd: 'Yên ổn, không phải lo nghĩ.', cd: 'Công việc trôi chảy.', tl: 'Tiền vào đều, làm ăn khấm khá.', sk: 'Khỏe mạnh.', hh: 'Học hành suôn sẻ.', td: 'Thuận lợi, gặp đúng người.', k: 'Lúc thuận lợi nhớ giúp người đang khó.' },
+  { lv: 'Hạ Quẻ', p: ['Lời ra như nước đổ đi', 'Khó mà hốt lại, nói gì cũng cân', 'Lưỡi mềm mà hại muôn phần', 'Nói lời ngọt dịu, kẻ gần người xa'],
+    y: 'Dễ vạ miệng, nên cẩn trọng lời nói.', gd: 'Nói nhẹ nhàng với người thân, tránh lời làm tổn thương.', cd: 'Không bàn chuyện người khác nơi làm việc.', tl: 'Đừng hứa chuyện tiền bạc khi chưa chắc.', sk: 'Giữ giọng, tránh cáu gắt.', hh: 'Lễ phép với thầy cô, bạn bè.', td: 'Một câu nói vội có thể làm người kia buồn lâu.', k: 'Uốn lưỡi bảy lần trước khi nói.' },
+  { lv: 'Thượng Thượng', p: ['Đêm xuân sao sáng đầy trời', 'Ánh vàng soi tỏ, muôn nơi rạng ngời', 'Quý nhân chỉ lối giúp người', 'Việc to việc nhỏ, mười mươi vẹn tròn'],
+    y: 'Có quý nhân phù trợ, việc gì cũng thành.', gd: 'Có người giúp nhà mình việc lớn.', cd: 'Được cấp trên, đối tác nâng đỡ.', tl: 'Có người mách nước làm ăn, lộc vào.', sk: 'Gặp thầy giỏi, thuốc hay.', hh: 'Gặp thầy giỏi chỉ dạy tận tình.', td: 'Có người mai mối tốt.', k: 'Được giúp thì nhớ ơn, sau này giúp lại người khác.' },
+  { lv: 'Trung Bình', p: ['Cầu tre lắt lẻo gập ghềnh', 'Bước chân cẩn thận, chênh vênh cũng qua', 'Có người nắm lấy tay ta', 'Qua cầu rồi sẽ thấy nhà bình yên'],
+    y: 'Có đoạn khó đi nhưng có người đỡ đần, cẩn thận là qua.', gd: 'Người nhà luôn ở bên lúc khó.', cd: 'Việc có rủi ro, làm chậm mà chắc.', tl: 'Thu chi hơi chật, nên tính toán kỹ.', sk: 'Cẩn thận té ngã khi đi lại.', hh: 'Môn khó thì nhờ bạn kèm.', td: 'Có lúc chênh vênh, nắm tay nhau thì qua.', k: 'Đi chậm mà chắc, có bạn đồng hành thì đỡ sợ.' },
+  { lv: 'Thượng Cát', p: ['Tre xanh thẳng tắp lưng đồi', 'Gió lay chẳng ngã, măng chồi mọc lên', 'Ngay thẳng giữ vững lòng bền', 'Họ hàng che chở, vững nền sum vầy'],
+    y: 'Vững vàng, đoàn kết như lũy tre làng.', gd: 'Họ hàng gắn bó, giúp đỡ nhau.', cd: 'Vững vàng trước áp lực, được nể trọng.', tl: 'Ổn định, có nguồn thu bền.', sk: 'Dẻo dai.', hh: 'Bền bỉ, không nản.', td: 'Thủy chung, bền chặt.', k: 'Một cây làm chẳng nên non, ba cây chụm lại nên hòn núi cao.' },
+  { lv: 'Trung Bình', p: ['Trăng kia khuyết lại có tròn', 'Người ơi chớ có héo hon u sầu', 'Được thua đâu có dài lâu', 'Lòng vui thì chuyện trước sau cũng thành'],
+    y: 'Lúc lên lúc xuống là thường, giữ tinh thần lạc quan.', gd: 'Có chuyện buồn nhỏ, rồi sẽ qua.', cd: 'Có lúc chững lại, đừng nản.', tl: 'Lúc được lúc mất, nên giữ quỹ dự phòng.', sk: 'Giữ tinh thần vui vẻ.', hh: 'Điểm lúc cao lúc thấp, cứ học đều.', td: 'Giận rồi lại thương, đừng làm lớn chuyện.', k: 'Sau cơn mưa trời lại sáng.' },
+  { lv: 'Thượng Cát', p: ['Chợ xuân đông đúc người qua', 'Hàng ngon giá phải, gần xa tìm về', 'Thật thà chẳng phải ê chề', 'Buôn may bán đắt, bốn bề mến thương'],
+    y: 'Rất tốt cho buôn bán, làm ăn.', gd: 'Nhà có thêm nguồn thu.', cd: 'Khách hàng tin tưởng, công việc đông.', tl: 'Buôn may bán đắt.', sk: 'Bận rộn nhưng khỏe.', hh: 'Nên học thêm kỹ năng giao tiếp.', td: 'Quen nhau qua công việc.', k: 'Buôn bán thật thà thì khách theo lâu.' },
+  { lv: 'Hạ Quẻ', p: ['Ham vui quên cả đường về', 'Tiền trao tay khác, bốn bề trắng tay', 'Đầu xuân giữ ví cho đầy', 'Chớ nghe rủ rê, đến ngày ăn năn'],
+    y: 'Dễ hao tài vì ham chơi, cả tin.', gd: 'Bàn bạc kỹ chuyện chi tiêu ngày Tết.', cd: 'Tránh xa lời rủ làm ăn chụp giật.', tl: 'Dễ mất tiền vì đỏ đen hoặc cho vay.', sk: 'Đừng thức khuya chơi bời.', hh: 'Bớt chơi game, tập trung học.', td: 'Tỉnh táo trước lời ngon ngọt.', k: 'Tiền khó kiếm mà dễ tiêu, giữ được mới là của mình.' },
+  { lv: 'Thượng Thượng', p: ['Người đi xa nay đã về', 'Mẹ cha mừng rỡ, xóm quê rộn ràng', 'Mâm cơm tiếng nói cười vang', 'Tình thân sum họp, họ hàng yêu thương'],
+    y: 'Đoàn tụ, có tin vui từ người đi xa.', gd: 'Người thân ở xa về sum họp.', cd: 'Có cơ hội về gần nhà hoặc có việc tốt ở quê.', tl: 'Có tiền gửi về, lộc từ phương xa.', sk: 'Người đau ốm được chăm sóc, mau khỏe.', hh: 'Tin vui học hành của con cháu ở xa.', td: 'Người thương trở về.', k: 'Về thăm nhà nhiều hơn khi còn có thể.' },
+  { lv: 'Trung Bình', p: ['Kiến tha từng hạt đầy hang', 'Việc tuy bé nhỏ, rõ ràng có công', 'Chớ chê ít, chớ nản lòng', 'Năm dài tích góp, mùa đông chẳng sầu'],
+    y: 'Tích lũy từng chút, sau này yên ổn.', gd: 'Lo xa cho nhà, để dành dần.', cd: 'Việc nhỏ làm tốt sẽ được giao việc lớn.', tl: 'Tích tiểu thành đại, nên mở sổ tiết kiệm.', sk: 'Giữ những thói quen tốt nhỏ mỗi ngày.', hh: 'Học từng chút, ghi chép đều.', td: 'Quan tâm nhỏ mỗi ngày giữ tình bền.', k: 'Kiến tha lâu cũng đầy tổ.' },
+  { lv: 'Thượng Cát', p: ['Diều bay lộng gió đồng quê', 'Dây bền tay vững, bốn bề trời xanh', 'Ngược gió lại càng bay nhanh', 'Gian nan thử sức, rạng danh với đời'],
+    y: 'Gặp thử thách lại càng giỏi lên.', gd: 'Nhà có việc khó, cả nhà mạnh mẽ hơn.', cd: 'Áp lực nhiều nhưng là dịp để bứt phá.', tl: 'Mạo hiểm có tính toán thì có lời.', sk: 'Tập luyện tăng sức bền.', hh: 'Đề khó lại làm tốt.', td: 'Qua sóng gió càng thêm gắn bó.', k: 'Giữ chặt sợi dây của mình: gia đình và lẽ phải.' },
+  { lv: 'Hạ Quẻ', p: ['Nước lên chưa rút ruộng đồng', 'Chớ vội gieo mạ, chờ trông nước ròng', 'Việc to tạm gác trong lòng', 'Đợi khi trời tạnh, thong dong ra tay'],
+    y: 'Thời điểm chưa thuận, việc lớn nên hoãn.', gd: 'Chưa nên sửa nhà hay chuyển nhà đầu năm.', cd: 'Chưa nên nhảy việc hay mở rộng.', tl: 'Giữ tiền mặt, chưa đầu tư lớn.', sk: 'Chú ý bệnh theo mùa, giữ vệ sinh.', hh: 'Củng cố kiến thức cũ trước.', td: 'Chưa phải lúc ngỏ lời, chờ thêm.', k: 'Biết chờ cũng là một cách thắng.' },
+  { lv: 'Trung Bình', p: ['Ấm trà sớm sớm khói bay', 'Nhâm nhi từng ngụm, ngẫm hay dở đời', 'Lặng yên nghe hết mọi lời', 'Nghĩ rồi hãy nói, ai người chẳng thương'],
+    y: 'Năm nên chậm lại, suy ngẫm trước khi làm.', gd: 'Ngồi uống trà, trò chuyện với cha mẹ nhiều hơn.', cd: 'Lắng nghe góp ý để sửa mình.', tl: 'Suy tính kỹ trước khi chi khoản lớn.', sk: 'Thư giãn, giảm căng thẳng.', hh: 'Đọc kỹ đề trước khi làm bài.', td: 'Lắng nghe người kia nhiều hơn.', k: 'Chậm một nhịp, hiểu thêm một điều.' },
+  { lv: 'Thượng Cát', p: ['Ong chăm hút nhụy trăm hoa', 'Mật ngon ngọt lịm, cả nhà cùng vui', 'Siêng năng chẳng ngại ngược xuôi', 'Mồ hôi rơi xuống, nụ cười nở hoa'],
+    y: 'Chăm chỉ làm lụng sẽ có thành quả ngọt.', gd: 'Mỗi người góp một tay, nhà vui.', cd: 'Siêng năng được ghi nhận, có thể tăng lương.', tl: 'Làm nhiều hưởng nhiều.', sk: 'Vận động nhiều, khỏe.', hh: 'Chăm chỉ sẽ giỏi.', td: 'Chân thành vun đắp sẽ có kết quả.', k: 'Có làm thì mới có ăn.' },
+  { lv: 'Thượng Thượng', p: ['Cửa son mở đón xuân sang', 'Câu đối đỏ thắm, mai vàng trước sân', 'Phúc, Lộc, Thọ đủ ba phần', 'Năm nay như ý, xa gần ngợi khen'],
+    y: 'Phúc, Lộc, Thọ đều đủ, một năm rất tốt.', gd: 'Nhà đủ đầy, ông bà vui khỏe.', cd: 'Công danh thuận lợi.', tl: 'Tài lộc dồi dào.', sk: 'Cả nhà khỏe mạnh.', hh: 'Đạt kết quả cao.', td: 'Duyên lành, có thể có tin hỷ.', k: 'Phúc nhiều thì chia bớt cho người khó khăn.' },
+  { lv: 'Trung Bình', p: ['Vàng thật chẳng ngại lửa hồng', 'Thử qua mới rõ tấm lòng sắt son', 'Khó khăn như núi như non', 'Bền gan rồi sẽ vuông tròn mọi bề'],
+    y: 'Có thử thách để chứng tỏ bản lĩnh, vượt qua sẽ được tin trọng.', gd: 'Lúc khó mới biết ai thương mình thật.', cd: 'Được giao việc khó, làm tốt sẽ được trọng dụng.', tl: 'Có lúc kẹt tiền, giữ uy tín sẽ qua.', sk: 'Chịu khó giữ gìn, mau hồi phục.', hh: 'Kỳ thi khó, cần chuẩn bị kỹ.', td: 'Thử thách cho thấy lòng thật.', k: 'Lửa thử vàng, gian nan thử sức.' },
+  { lv: 'Thượng Cát', p: ['Chim về làm tổ cành cao', 'Nhà yên cửa ấm, ra vào thênh thang', 'Dọn nhà, đón phúc rộn ràng', 'Chuyện nhà chuyện cửa, mọi đàng thuận xuôi'],
+    y: 'Tốt cho việc nhà cửa: an cư lạc nghiệp.', gd: 'Thuận lợi sửa nhà, dọn về nhà mới.', cd: 'Ổn định chỗ làm.', tl: 'Mua sắm đồ lớn cho nhà là hợp lý.', sk: 'Nhà thoáng, cả nhà khỏe.', hh: 'Có góc học tập mới, học tốt hơn.', td: 'Tính chuyện về chung một nhà.', k: 'Nhà gọn gàng thì lòng cũng thảnh thơi.' },
+  { lv: 'Trung Bình', p: ['Gương trong soi rõ mặt mình', 'Lỗi mình tự sửa, chẳng đành trách ai', 'Mỗi ngày sửa một điều sai', 'Cuối năm nhìn lại, mấy ai sánh bằng'],
+    y: 'Năm để nhìn lại bản thân, sửa mình sẽ tiến bộ.', gd: 'Nhận lỗi trước, nhà sẽ êm.', cd: 'Nhận góp ý, sửa cách làm.', tl: 'Xem lại những khoản chi không cần thiết.', sk: 'Bỏ thói quen xấu như thức khuya, ăn vặt.', hh: 'Xem lại bài sai để không sai lại.', td: 'Thay đổi bản thân trước khi đòi người kia thay đổi.', k: 'Trách mình trước, trách người sau.' },
+  { lv: 'Thượng Cát', p: ['Chuông chùa văng vẳng sớm mai', 'Lòng thanh như nước, ngày dài thảnh thơi', 'Làm lành lánh dữ trọn đời', 'Phúc theo từng bước, mọi nơi an lành'],
+    y: 'Tâm an, làm việc thiện thì phúc tự đến.', gd: 'Nhà yên ấm, ít lo âu.', cd: 'Làm việc với tâm thế bình thản, ít va chạm.', tl: 'Đủ dùng, có dư để làm việc tốt.', sk: 'Tinh thần thư thái, ngủ ngon.', hh: 'Học trong tâm thế thoải mái sẽ nhớ lâu.', td: 'Gặp người hiền lành.', k: 'Mỗi ngày làm một việc tốt, dù nhỏ.' },
+  { lv: 'Thượng Thượng', p: ['Diên Hồng một tiếng đồng lòng', 'Muôn người như một, non sông vững bền', 'Chung vai góp sức đắp nền', 'Việc to đến mấy cũng nên vẹn toàn'],
+    y: 'Như hội nghị Diên Hồng thời Trần: đồng lòng thì việc lớn mấy cũng xong.', gd: 'Cả nhà đồng lòng làm việc lớn như xây nhà, mở tiệm.', cd: 'Việc chung của cả nhóm thành công lớn.', tl: 'Hùn vốn cùng người tin cậy, lời lớn.', sk: 'Cả nhà cùng tập thể dục.', hh: 'Lớp đoàn kết, thi đua tốt.', td: 'Hai bên gia đình đồng thuận.', k: 'Lắng nghe ý kiến mọi người trước khi quyết.' },
+  { lv: 'Thượng Cát', p: ['Năm cũ khép lại nhẹ nhàng', 'Năm mới mở cửa, rộn ràng niềm vui', 'Ơn người nhớ mãi không nguôi', 'Gieo nhân lành để tiếng cười vang xa'],
+    y: 'Khởi đầu năm mới thuận lợi, biết ơn sẽ gặp nhiều may mắn.', gd: 'Thăm hỏi, cảm ơn những người đã giúp nhà mình.', cd: 'Tri ân đồng nghiệp, đối tác, sẽ được giúp tiếp.', tl: 'Lộc đến từ những mối quan hệ tốt.', sk: 'Tâm vui thì thân khỏe.', hh: 'Biết ơn thầy cô, học càng tấn tới.', td: 'Trân trọng người đang ở bên.', k: 'Uống nước nhớ nguồn.' }
 ];
 const XAM_LV_CLASS = { 'Thượng Thượng': 'tt', 'Thượng Cát': 'tc', 'Trung Bình': 'tb', 'Hạ Quẻ': 'hq' };
 
@@ -1879,7 +1942,7 @@ const loadImg = src => new Promise((ok, no) => { const i = new Image(); i.onload
 async function saveXam(no, topic, nm) {
   const q = XAM[no - 1], main = XAM_TOPICS.find(t => t[0] === topic);
   try { await Promise.all([document.fonts.load('700 46px "Dancing Script"', q.p.join(' ')), document.fonts.load('800 30px "Be Vietnam Pro"', q.y), document.fonts.load('400 30px "Be Vietnam Pro"', q.y)]); } catch (e) { /* fallback fonts */ }
-  let photo = null; try { photo = await loadImg('images/duc-thanh-tran.jpg'); } catch (e) { /* draw without photo */ }
+  let photo = null; try { photo = await loadImg('images/duc-thanh-tran-tranh.jpg'); } catch (e) { /* draw without photo */ }
   const W = 900, PAD = 110, TW = W - PAD * 2, F = '"Be Vietnam Pro", sans-serif';
   const m = document.createElement('canvas').getContext('2d');
   const wrap = (text, font) => {
@@ -1892,8 +1955,8 @@ async function saveXam(no, topic, nm) {
     { label: main[1].slice(3), lines: wrap(q[topic], `600 29px ${F}`), hl: true },
     { label: 'Lời khuyên', lines: wrap(q.k, `400 29px ${F}`) }
   ];
-  const photoH = photo ? 330 : 0, top = 150 + photoH;
-  const cardTop = top + (nm ? 150 : 110), poemH = 4 * 64 + 40;
+  const PW = 300, PH = photo ? Math.round(PW * photo.height / photo.width) : 0, photoH = photo ? PH + 30 : 0, top = 150 + photoH;
+  const cardTop = top + (nm ? 180 : 110), poemH = 4 * 64 + 40;
   const blocksH = blocks.reduce((h, b) => h + 46 + b.lines.length * 42 + (b.hl ? 36 : 14), 0);
   const H = cardTop + poemH + blocksH + 150;
   const c = document.createElement('canvas'); c.width = W; c.height = H; const x = c.getContext('2d');
@@ -1903,20 +1966,20 @@ async function saveXam(no, topic, nm) {
   x.textAlign = 'center'; x.fillStyle = '#ffd66b'; x.font = `800 44px ${F}`; x.fillText('XĂM ĐỨC THÁNH TRẦN', W / 2, 100);
   x.fillStyle = '#ffe7a3'; x.font = `400 24px ${F}`; x.fillText('Hưng Đạo Đại Vương · Xuân Đinh Mùi 2027', W / 2, 138);
   if (photo) {
-    const dw = 260, dh = 300, dx = (W - dw) / 2, dy = 160, sh = Math.min(photo.height, photo.width * dh / dw);
+    const dw = PW, dh = PH, dx = (W - dw) / 2, dy = 160;
     const arch = () => { x.beginPath(); x.moveTo(dx, dy + dh); x.lineTo(dx, dy + dw / 2); x.arc(dx + dw / 2, dy + dw / 2, dw / 2, Math.PI, 0); x.lineTo(dx + dw, dy + dh); x.closePath(); };
     const glow = x.createRadialGradient(W / 2, dy + 120, 20, W / 2, dy + 120, 260); glow.addColorStop(0, 'rgba(255,214,107,.45)'); glow.addColorStop(1, 'rgba(255,214,107,0)');
     x.fillStyle = glow; x.fillRect(0, dy - 60, W, dh + 120);
-    x.save(); arch(); x.clip(); x.drawImage(photo, 0, 0, photo.width, sh, dx, dy, dw, dh); x.restore();
+    x.save(); arch(); x.clip(); x.drawImage(photo, dx, dy, dw, dh); x.restore();
     arch(); x.strokeStyle = '#f5b93a'; x.lineWidth = 6; x.stroke();
   }
   let y = top + 50;
-  x.fillStyle = '#ffe7a3'; x.font = `700 30px ${F}`; x.fillText(`QUẺ SỐ ${no}`, W / 2, y);
+  x.fillStyle = '#ffe7a3'; x.font = `700 30px ${F}`; x.fillText(`QUẺ SỐ ${no}/${XAM.length}`, W / 2, y);
   x.font = `800 30px ${F}`; const lw = x.measureText(q.lv).width + 50;
   x.fillStyle = q.lv === 'Hạ Quẻ' ? '#5f5a55' : q.lv === 'Trung Bình' ? '#9c6510' : '#d81e25';
   x.beginPath(); x.roundRect(W / 2 - lw / 2, y + 16, lw, 50, 25); x.fill(); x.strokeStyle = '#ffd66b'; x.lineWidth = 2; x.stroke();
   x.fillStyle = '#fff'; x.fillText(q.lv, W / 2, y + 52);
-  if (nm) { x.fillStyle = '#fff5d6'; x.font = `400 26px ${F}`; x.fillText(`Quẻ của ${nm}`, W / 2, y + 106); }
+  if (nm) { x.fillStyle = '#fff5d6'; x.font = `400 26px ${F}`; x.fillText(`Quẻ của ${nm}`, W / 2, y + 106, W - 160); }
   const cg = x.createLinearGradient(0, cardTop, 0, H - 80); cg.addColorStop(0, '#fff8ea'); cg.addColorStop(1, '#ffeec4');
   x.fillStyle = cg; x.beginPath(); x.roundRect(70, cardTop, W - 140, H - cardTop - 90, 26); x.fill();
   x.strokeStyle = '#f5b93a'; x.lineWidth = 3; x.stroke();
@@ -1937,68 +2000,84 @@ async function saveXam(no, topic, nm) {
 }
 
 game({ id: 'thanhtran', icon: '⚔️', title: 'Xăm Đức Thánh Trần', tag: 'Đầu năm', isNew: true,
-  desc: 'Thắp hương, lắc ống xăm, gieo keo xin quẻ đầu năm.',
+  desc: 'Khấn, gieo keo xin phép, rồi lắc ống rút quẻ đầu năm.',
   mount(st) {
     let topic = 'gd', step = 'start', no = 0, tries = 0;
     st.innerHTML = `
-      <p class="desc">Đầu năm xin một quẻ xăm Đức Thánh Trần Hưng Đạo. Thành tâm khấn điều mình muốn hỏi, lắc ống xăm rồi gieo keo: được <b>một sấp một ngửa</b> mới là Thánh đồng ý.</p>
+      <p class="desc">Đầu năm xin một quẻ xăm Đức Thánh Trần Hưng Đạo (bộ 50 quẻ). Khấn họ tên, năm sinh, nơi ở và việc muốn hỏi; gieo keo xin phép, được <b>một sấp một ngửa</b> mới lắc ống rút thẻ. Một thẻ chỉ cho một việc.</p>
       <div class="altar">
         <div class="altar-hd"><span>Đức Thánh Trần</span><small>Hưng Đạo Đại Vương</small></div>
-        <div class="shrine"><span class="candle l" aria-hidden="true"></span><figure class="shrine-img"><img src="images/duc-thanh-tran.jpg" alt="Tượng Đức Thánh Trần Hưng Đạo" width="224" height="474"></figure><span class="candle r" aria-hidden="true"></span></div>
+        <div class="shrine"><span class="candle l" aria-hidden="true"></span><figure class="shrine-img"><img src="images/duc-thanh-tran-tranh.jpg" alt="Tranh Đức Thánh Trần Hưng Đạo" width="375" height="485"></figure><span class="candle r" aria-hidden="true"></span></div>
         <div class="altar-row">
           <div class="incense" id="inc" aria-hidden="true"><div class="smoke"><i></i><i></i><i></i></div><div class="tt-sticks"><b></b><b></b><b></b></div><div class="tt-bowl"></div></div>
           <div class="tube-wrap xt" id="tw"><div class="sticks">${'<i></i>'.repeat(9)}</div><div class="tube"><span>Xăm</span></div><div class="stick-no" id="sn" hidden></div></div>
           <div class="keo-pair" id="kp" aria-hidden="true"><span class="keo"></span><span class="keo"></span></div>
         </div>
       </div>
-      <label class="name-field">Tên người xin quẻ (không bắt buộc)<input id="nm" maxlength="30" placeholder="VD: Lê Hoàng Minh" autocomplete="off"></label>
-      <p class="topic-lb">Điều muốn hỏi</p>
-      <div class="paper-pick topics" role="group" aria-label="Điều muốn hỏi">${XAM_TOPICS.map(([k, t]) => `<button type="button" data-t="${k}" aria-pressed="${k === topic}">${t}</button>`).join('')}</div>
+      <div class="khan-grid">
+        <label class="name-field">Họ tên<input id="nm" maxlength="30" placeholder="VD: Lê Hoàng Minh" autocomplete="off"></label>
+        <label class="name-field">Năm sinh<input id="ns" maxlength="4" inputmode="numeric" placeholder="VD: 1990" autocomplete="off"></label>
+        <label class="name-field wide">Nơi ở<input id="no" maxlength="40" placeholder="VD: Quận 1, TP. Hồ Chí Minh" autocomplete="off"></label>
+      </div>
+      <p class="topic-lb">Việc muốn hỏi</p>
+      <div class="paper-pick topics" role="group" aria-label="Việc muốn hỏi">${XAM_TOPICS.map(([k, t]) => `<button type="button" data-t="${k}" aria-pressed="${k === topic}">${t}</button>`).join('')}</div>
       <p class="xam-msg" id="msg" aria-live="polite">Bước 1: thắp ba nén hương và khấn.</p>
       <button class="btn" id="go" type="button">🙏 Thắp hương khấn</button>
       <div id="out" aria-live="polite"></div>
       <p class="xam-note">Các quẻ trong trò này do web soạn để vui đầu năm, lấy cảm hứng từ lời răn của Đức Thánh Trần, không phải bản quẻ của đền nào.</p>`;
     const go = $('#go', st), msg = $('#msg', st), out = $('#out', st), tw = $('#tw', st), sn = $('#sn', st), kp = $('#kp', st), inc = $('#inc', st);
+    const val = id => $(id, st).value.trim().replace(/\s+/g, ' ');
+    const topicName = () => XAM_TOPICS.find(t => t[0] === topic)[1].slice(3);
+    $('#ns', st).addEventListener('input', e => { e.target.value = e.target.value.replace(/\D/g, ''); });
     $$('.topics button', st).forEach(b => b.onclick = () => {
       topic = b.dataset.t; $$('.topics button', st).forEach(x => x.setAttribute('aria-pressed', x === b)); sfx('flip');
     });
-    const setStep = (s, label, text) => { step = s; go.textContent = label; msg.innerHTML = text; go.disabled = false; };
+    const setStep = (s, label, text) => { step = s; go.textContent = label; if (text != null) msg.innerHTML = text; go.disabled = false; };
 
+    // Step 1: light incense and say the prayer (name, birth year, home, question)
     function light() {
-      go.disabled = true; inc.classList.add('lit'); $('.altar', st).classList.add('lit'); sfx('bell');
-      const nm = $('#nm', st).value.trim();
-      msg.innerHTML = `Con${nm ? ` là <b>${esc(nm)}</b>` : ''} thành tâm kính lễ, xin Đức Thánh cho con một quẻ về <b>${esc(XAM_TOPICS.find(t => t[0] === topic)[1].slice(3))}</b>…`;
-      T.after(() => setStep('shake', '🎋 Lắc ống xăm', 'Bước 2: lắc ống xăm cho một que rơi ra.'), reduceMotion ? 300 : 2200);
+      go.disabled = true; out.innerHTML = ''; sn.hidden = true; tries = 0; kp.className = 'keo-pair';
+      $$('.keo', kp).forEach(k => k.className = 'keo');
+      $$('.sticks i', tw).forEach(i => i.classList.remove('out'));
+      inc.classList.add('lit'); $('.altar', st).classList.add('lit'); sfx('bell');
+      const nm = val('#nm'), ns = val('#ns'), home = val('#no');
+      msg.innerHTML = `Con${nm ? ` là <b>${esc(nm)}</b>` : ''}${ns ? `, sinh năm <b>${esc(ns)}</b>` : ''}${home ? `, ở <b>${esc(home)}</b>` : ''}, thành tâm kính lễ Đức Thánh Trần, xin Ngài cho con một quẻ về <b>${esc(topicName())}</b>…`;
+      T.after(() => setStep('permit', '🪙 Gieo keo xin phép', 'Bước 2: gieo keo xin phép được gieo quẻ. Trong 3 lần, chỉ cần một lần <b>một sấp một ngửa</b>.'), reduceMotion ? 300 : 2400);
     }
+    // Step 2: up to three tosses asking permission
+    function permit() {
+      go.disabled = true; tries++;
+      const r = Math.random(), res = r < .5 ? 'thanh' : r < .75 ? 'cuoi' : 'am';
+      const faces = res === 'thanh' ? shuffle(['up', 'down']) : res === 'cuoi' ? ['up', 'up'] : ['down', 'down'];
+      kp.className = 'keo-pair'; void kp.offsetWidth; kp.classList.add('toss'); sfx('whoosh');
+      T.after(() => {
+        kp.classList.remove('toss'); $$('.keo', kp).forEach((k, i) => k.className = 'keo ' + faces[i]); sfx('flip');
+        if (res === 'thanh') { tries = 0; return setStep('shake', '🎋 Lắc ống xăm', '✨ Một sấp một ngửa: <b>Đức Thánh cho phép</b>. Bước 3: lắc ống cho một thẻ trồi ra.'); }
+        const what = res === 'cuoi' ? 'Hai mặt ngửa (keo cười): chưa có câu trả lời.' : 'Hai mặt sấp (keo úp): chưa được phép.';
+        if (tries < 3) return setStep('permit', `🪙 Gieo keo lần ${tries + 1}/3`, `${what} Mời gieo lại, lần ${tries + 1}/3.`);
+        tries = 0;
+        setStep('start', '🙏 Khấn lại', `${what} Cả 3 lần chưa được một sấp một ngửa: hôm nay Đức Thánh chưa cho xin quẻ việc này. Hãy tĩnh tâm khấn lại, hoặc để hôm khác.`);
+      }, reduceMotion ? 200 : 1300);
+    }
+    // Step 3: shake the tube, one stick for one question
     function shake() {
-      go.disabled = true; out.innerHTML = ''; sn.hidden = true; kp.className = 'keo-pair';
+      go.disabled = true; out.innerHTML = ''; sn.hidden = true;
       $$('.sticks i', tw).forEach(i => i.classList.remove('out'));
       tw.classList.add('shake'); sfx('sticks', 1.6);
       T.after(() => {
         tw.classList.remove('shake'); pick($$('.sticks i', tw)).classList.add('out'); sfx('click');
         no = randInt(1, XAM.length); sn.textContent = no; sn.hidden = false;
-        setStep('toss', '🪙 Gieo keo xin ý', `Que xăm số <b>${no}</b> đã rơi ra. Bước 3: gieo keo xem Thánh có đồng ý quẻ này không.`);
+        msg.innerHTML = `Thẻ số <b>${no}</b> đã trồi ra. Mời xem quẻ.`;
+        T.after(show, reduceMotion ? 0 : 700);
       }, reduceMotion ? 200 : 1600);
     }
-    function toss() {
-      go.disabled = true; tries++;
-      // âm dương (one up one down) = yes; after a couple of misses the gods are kind
-      const r = tries >= 3 ? 0 : Math.random(), res = r < .5 ? 'thanh' : r < .75 ? 'cuoi' : 'am';
-      const faces = res === 'thanh' ? shuffle(['up', 'down']) : res === 'cuoi' ? ['up', 'up'] : ['down', 'down'];
-      kp.className = 'keo-pair'; void kp.offsetWidth; kp.classList.add('toss'); sfx('whoosh');
-      T.after(() => {
-        kp.classList.remove('toss'); $$('.keo', kp).forEach((k, i) => k.className = 'keo ' + faces[i]); sfx('flip');
-        if (res === 'thanh') { tries = 0; msg.innerHTML = '✨ Một sấp một ngửa: <b>Thánh đồng ý</b>. Mời xem quẻ.'; show(); }
-        else if (res === 'cuoi') setStep('toss', '🪙 Gieo keo lại', 'Hai mặt ngửa: Thánh cười, chưa trả lời. Mời gieo keo lại.');
-        else { tries = 0; setStep('shake', '🎋 Lắc lại ống xăm', 'Hai mặt sấp: Thánh chưa thuận quẻ này. Mời lắc ống xăm xin quẻ khác.'); }
-      }, reduceMotion ? 200 : 1300);
-    }
     function show() {
-      const q = XAM[no - 1], nm = $('#nm', st).value.trim(), main = XAM_TOPICS.find(t => t[0] === topic);
+      const q = XAM[no - 1], main = XAM_TOPICS.find(t => t[0] === topic);
+      const nm = val('#nm'), ns = val('#ns'), who = nm ? nm + (ns ? ` (sinh năm ${ns})` : '') : '';
       out.innerHTML = `
         <article class="xam-card ${XAM_LV_CLASS[q.lv]}">
-          <div class="xam-top"><span>Quẻ số ${no}</span><b>${esc(q.lv)}</b></div>
-          ${nm ? `<p class="f-for">Quẻ của <b>${esc(nm)}</b> · Xuân Đinh Mùi 2027</p>` : ''}
+          <div class="xam-top"><span>Quẻ số ${no}/${XAM.length}</span><b>${esc(q.lv)}</b></div>
+          ${who ? `<p class="f-for">Quẻ của <b>${esc(who)}</b> · Xuân Đinh Mùi 2027</p>` : ''}
           <blockquote class="xam-poem">${q.p.map(l => `<span>${esc(l)}</span>`).join('')}</blockquote>
           <p class="xam-y"><b>Ý quẻ:</b> ${esc(q.y)}</p>
           <div class="xam-main"><b>${main[1]}</b><p>${esc(q[topic])}</p></div>
@@ -2007,18 +2086,18 @@ game({ id: 'thanhtran', icon: '⚔️', title: 'Xăm Đức Thánh Trần', tag:
           ${q.lv === 'Hạ Quẻ' ? '<p class="xam-soft">Quẻ hạ không phải điềm xấu, chỉ là lời nhắc năm nay nên cẩn trọng hơn một chút.</p>' : ''}
         </article>
         <div class="row xam-actions"><button class="btn" id="saveQ" type="button">💾 Lưu ảnh quẻ</button></div>`;
-      const drawn = { no, topic, nm };
+      const drawn = { no, topic, who };
       $('#saveQ', out).onclick = async e => {
         const b = e.currentTarget; b.disabled = true; b.textContent = '⏳ Đang lưu…';
-        try { await saveXam(drawn.no, drawn.topic, drawn.nm); } catch (err) { console.error(err); alert('Không lưu được ảnh, bạn thử chụp màn hình nhé!'); }
+        try { await saveXam(drawn.no, drawn.topic, drawn.who); } catch (err) { console.error(err); alert('Không lưu được ảnh, bạn thử chụp màn hình nhé!'); }
         b.disabled = false; b.textContent = '💾 Lưu ảnh quẻ';
       };
-      setStep('shake', '🎋 Xin quẻ cho người khác', msg.innerHTML);
+      setStep('start', '🙏 Khấn xin việc khác', 'Một thẻ chỉ cho một việc. Muốn hỏi việc khác hoặc xin cho người khác, hãy khấn lại từ đầu.');
       sfx('bell');
       q.lv === 'Thượng Thượng' ? fx.fireworks() : fx.burst({ count: 50 });
       out.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });
     }
-    go.onclick = () => ({ start: light, shake, toss }[step] || light)();
+    go.onclick = () => ({ start: light, permit, shake }[step] || light)();
   }
 });
 
